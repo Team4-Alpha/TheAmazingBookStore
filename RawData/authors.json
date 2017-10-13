@@ -1,0 +1,186 @@
+[
+    {
+        "firstName": "Jeffery",
+        "lastName": "Deaver",
+        "country": "Canada",
+        "books": [
+            "The Twelfth Card",
+            "The Burial Hour"
+        ]
+    },
+    {
+        "firstName": "Karen Marie",
+        "lastName": "Moning",
+        "country": "France",
+        "books": [
+            "Feverborn"
+        ]
+    },
+    {
+        "firstName": "Peter",
+        "lastName": "Matthiessen",
+        "country": "Australia",
+        "books": [
+            "The Snow Leopard",
+            "Shadow Country"
+        ]
+    },
+    {
+        "firstName": "Steve",
+        "lastName": "Perry",
+        "country": "Norway",
+        "books": [
+            "Tom Clancy's Net Force: Breaking Point"
+        ]
+    },
+    {
+        "firstName": "Terri",
+        "lastName": "Blackstock",
+        "country": "USA",
+        "books": [
+            "Night Light: A Restoration Novel"
+        ]
+    },
+    {
+        "firstName": "Iris",
+        "lastName": "Johansen",
+        "country": "Denmark",
+        "books": [
+            "Chasing The Night",
+            "The Face Of Deception"
+        ]
+    },
+    {
+        "firstName": "John",
+        "lastName": "Rawls",
+        "country": "Luxembourg",
+        "books": [
+            "A Theory of Justice"
+        ]
+    },
+    {
+        "firstName": "Quinn",
+        "lastName": "Loftis",
+        "country": "Japan",
+        "books": [
+            "Out of the Dark"
+        ]
+    },
+    {
+        "firstName": "Oscar",
+        "lastName": "Hijuelos",
+        "country": "Spain",
+        "books": [
+            "The Mambo Kings Play Songs of Love"
+        ]
+    },
+    {
+        "firstName": "Ben",
+        "lastName": "Okri",
+        "country": "Austria",
+        "books": [
+            "The Famished Road",
+            "The Age of Magic"
+        ]
+    },
+    {
+        "firstName": "Miles ",
+        "lastName": "Cameron",
+        "country": "China",
+        "books": [
+            "The Red Knight",
+            "The Fell Sword"
+        ]
+    },
+    {
+        "firstName": "Ian",
+        "lastName": "Mortimer",
+        "country": "Singapore",
+        "books": [
+            "The Time-Traveller's Guide to Medieval England: A Handbook for Visitors to the Fourteenth Century"
+        ]
+    },
+    {
+        "firstName": "Michael",
+        "lastName": "Buckley",
+        "country": "Germany",
+        "books": [
+            "The Everafter War (The Sisters Grimm, #7)"
+        ]
+    },
+    {
+        "firstName": "Herman",
+        "lastName": "Melville",
+        "country": "Sweden",
+        "books": [
+            "Billy Budd, Sailor",
+            "Bartleby the Scrivener"
+        ]
+    },
+    {
+        "firstName": "Ilona",
+        "lastName": "Andrews",
+        "country": "Denmark",
+        "books": [
+            "Bayou Moon"
+        ]
+    },
+    {
+        "firstName": "Robert A.",
+        "lastName": "Caro",
+        "country": "Japan",
+        "books": [
+            "Means of Ascent"
+        ]
+    },
+    {
+        "firstName": "Patrick",
+        "lastName": "O'Brian",
+        "country": "Switzerland",
+        "books": [
+            "The Mauritius Command",
+            "Post Captain"
+        ]
+    },
+    {
+        "firstName": "Peggy",
+        "lastName": "Orenstein",
+        "country": "Finland",
+        "books": [
+            "Cinderella Ate My Daughter: Dispatches from the Frontlines of the New Girlie-Girl Culture",
+            "Girls & Sex: Navigating the Complicated New Landscape"
+        ]
+    },
+    {
+        "firstName": "John",
+        "lastName": "Keegan",
+        "country": "New Zealand",
+        "books": [
+            "The First World War"
+        ]
+    },
+    {
+        "firstName": "Peter",
+        "lastName": "Ferguson",
+        "country": "Netherlands",
+        "books": [
+            "The Everafter War (The Sisters Grimm, #7)"
+        ]
+    },
+    {
+        "firstName": "Tom",
+        "lastName": "Clancy",
+        "country": "Italy",
+        "books": [
+            "Tom Clancy's Net Force: Breaking Point"
+        ]
+    },
+    {
+        "firstName": "Steve",
+        "lastName": "Pieczenik",
+        "country": "United Kingdom",
+        "books": [
+            "Tom Clancy's Net Force: Breaking Point"
+        ]
+    }
+]

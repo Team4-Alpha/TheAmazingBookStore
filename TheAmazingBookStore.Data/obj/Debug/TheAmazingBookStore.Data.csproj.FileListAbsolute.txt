@@ -1,0 +1,13 @@
+E:\Workspace\DemosCSharp\TheAmazingBookStore\TheAmazingBookStore.Data\TheAmazingBookStore.Data\obj\Debug\TheAmazingBookStore.Data.csprojResolveAssemblyReference.cache
+E:\Workspace\DemosCSharp\TheAmazingBookStore\TheAmazingBookStore.Data\TheAmazingBookStore.Data\obj\Debug\TheAmazingBookStore.Data.csproj.CoreCompileInputs.cache
+E:\Workspace\DemosCSharp\TheAmazingBookStore\TheAmazingBookStore.Data\TheAmazingBookStore.Data\bin\Debug\TheAmazingBookStore.Data.dll.config
+E:\Workspace\DemosCSharp\TheAmazingBookStore\TheAmazingBookStore.Data\TheAmazingBookStore.Data\bin\Debug\TheAmazingBookStore.Data.dll
+E:\Workspace\DemosCSharp\TheAmazingBookStore\TheAmazingBookStore.Data\TheAmazingBookStore.Data\bin\Debug\TheAmazingBookStore.Data.pdb
+E:\Workspace\DemosCSharp\TheAmazingBookStore\TheAmazingBookStore.Data\TheAmazingBookStore.Data\bin\Debug\EntityFramework.dll
+E:\Workspace\DemosCSharp\TheAmazingBookStore\TheAmazingBookStore.Data\TheAmazingBookStore.Data\bin\Debug\EntityFramework.SqlServer.dll
+E:\Workspace\DemosCSharp\TheAmazingBookStore\TheAmazingBookStore.Data\TheAmazingBookStore.Data\bin\Debug\TheAmazingBookStore.Models.dll
+E:\Workspace\DemosCSharp\TheAmazingBookStore\TheAmazingBookStore.Data\TheAmazingBookStore.Data\bin\Debug\TheAmazingBookStore.Models.pdb
+E:\Workspace\DemosCSharp\TheAmazingBookStore\TheAmazingBookStore.Data\TheAmazingBookStore.Data\bin\Debug\EntityFramework.xml
+E:\Workspace\DemosCSharp\TheAmazingBookStore\TheAmazingBookStore.Data\TheAmazingBookStore.Data\bin\Debug\EntityFramework.SqlServer.xml
+E:\Workspace\DemosCSharp\TheAmazingBookStore\TheAmazingBookStore.Data\TheAmazingBookStore.Data\obj\Debug\TheAmazingBookStore.Data.dll
+E:\Workspace\DemosCSharp\TheAmazingBookStore\TheAmazingBookStore.Data\TheAmazingBookStore.Data\obj\Debug\TheAmazingBookStore.Data.pdb
