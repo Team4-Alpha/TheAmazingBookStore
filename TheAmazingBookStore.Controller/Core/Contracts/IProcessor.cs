@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TheAmazingBookStore.Controller
+namespace TheAmazingBookStore.Controller.Core.Contracts
 {
-    public class Class1
+    interface IProcessor
     {
+        void ProcessCommand(string commandAsString);
     }
 }

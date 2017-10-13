@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TheAmazingBookStore.Data;
+using TheAmazingBookStore.Data.Migrations;
 
 namespace TheAmazingBookStore.ConsoleClient
 {
@@ -11,9 +13,8 @@ namespace TheAmazingBookStore.ConsoleClient
     {
         static void Main(string[] args)
         {
-            var db = new BookStoreContext();
-
-            db.Database.CreateIfNotExists();
+            //TODO Configuration - Not Found
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<BookStoreContext, Configuration>());
         }
     }
 }
