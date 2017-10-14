@@ -26,3 +26,17 @@ E:\Workspace\DemosCSharp\TheAmazingBookStore\TheAmazingBookStore\TheAmazingBookS
 E:\Workspace\DemosCSharp\TheAmazingBookStore\TheAmazingBookStore\TheAmazingBookStore.Data\obj\Debug\TheAmazingBookStore.Data.pdb
 E:\Workspace\DemosCSharp\TheAmazingBookStore\TheAmazingBookStore\TheAmazingBookStore.Data\obj\Debug\TheAmazingBookStore.Data.Migrations.BooksInitial.resources
 E:\Workspace\DemosCSharp\TheAmazingBookStore\TheAmazingBookStore\TheAmazingBookStore.Data\obj\Debug\TheAmazingBookStore.Data.csproj.GenerateResource.Cache
+C:\Users\Taner\Desktop\TelerikAlpha\ModuleThree\TeamWorkDB\TheAmazingBookStore\TheAmazingBookStore.Data\bin\Debug\TheAmazingBookStore.Data.dll.config
+C:\Users\Taner\Desktop\TelerikAlpha\ModuleThree\TeamWorkDB\TheAmazingBookStore\TheAmazingBookStore.Data\bin\Debug\TheAmazingBookStore.Data.dll
+C:\Users\Taner\Desktop\TelerikAlpha\ModuleThree\TeamWorkDB\TheAmazingBookStore\TheAmazingBookStore.Data\bin\Debug\TheAmazingBookStore.Data.pdb
+C:\Users\Taner\Desktop\TelerikAlpha\ModuleThree\TeamWorkDB\TheAmazingBookStore\TheAmazingBookStore.Data\bin\Debug\EntityFramework.dll
+C:\Users\Taner\Desktop\TelerikAlpha\ModuleThree\TeamWorkDB\TheAmazingBookStore\TheAmazingBookStore.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Taner\Desktop\TelerikAlpha\ModuleThree\TeamWorkDB\TheAmazingBookStore\TheAmazingBookStore.Data\bin\Debug\TheAmazingBookStore.Models.dll
+C:\Users\Taner\Desktop\TelerikAlpha\ModuleThree\TeamWorkDB\TheAmazingBookStore\TheAmazingBookStore.Data\bin\Debug\TheAmazingBookStore.Models.pdb
+C:\Users\Taner\Desktop\TelerikAlpha\ModuleThree\TeamWorkDB\TheAmazingBookStore\TheAmazingBookStore.Data\bin\Debug\EntityFramework.xml
+C:\Users\Taner\Desktop\TelerikAlpha\ModuleThree\TeamWorkDB\TheAmazingBookStore\TheAmazingBookStore.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Taner\Desktop\TelerikAlpha\ModuleThree\TeamWorkDB\TheAmazingBookStore\TheAmazingBookStore.Data\obj\Debug\TheAmazingBookStore.Data.csprojResolveAssemblyReference.cache
+C:\Users\Taner\Desktop\TelerikAlpha\ModuleThree\TeamWorkDB\TheAmazingBookStore\TheAmazingBookStore.Data\obj\Debug\TheAmazingBookStore.Data.Migrations.BooksInitial.resources
+C:\Users\Taner\Desktop\TelerikAlpha\ModuleThree\TeamWorkDB\TheAmazingBookStore\TheAmazingBookStore.Data\obj\Debug\TheAmazingBookStore.Data.csproj.GenerateResource.Cache
+C:\Users\Taner\Desktop\TelerikAlpha\ModuleThree\TeamWorkDB\TheAmazingBookStore\TheAmazingBookStore.Data\obj\Debug\TheAmazingBookStore.Data.dll
+C:\Users\Taner\Desktop\TelerikAlpha\ModuleThree\TeamWorkDB\TheAmazingBookStore\TheAmazingBookStore.Data\obj\Debug\TheAmazingBookStore.Data.pdb

@@ -4,3 +4,8 @@ E:\Workspace\DemosCSharp\TheAmazingBookStore\TheAmazingBookStore.Data\TheAmazing
 E:\Workspace\DemosCSharp\TheAmazingBookStore\TheAmazingBookStore.Data\TheAmazingBookStore.Models\obj\Debug\TheAmazingBookStore.Models.csproj.CoreCompileInputs.cache
 E:\Workspace\DemosCSharp\TheAmazingBookStore\TheAmazingBookStore.Data\TheAmazingBookStore.Models\obj\Debug\TheAmazingBookStore.Models.dll
 E:\Workspace\DemosCSharp\TheAmazingBookStore\TheAmazingBookStore.Data\TheAmazingBookStore.Models\obj\Debug\TheAmazingBookStore.Models.pdb
+C:\Users\Taner\Desktop\TelerikAlpha\ModuleThree\TeamWorkDB\TheAmazingBookStore\TheAmazingBookStore.Models\bin\Debug\TheAmazingBookStore.Models.dll
+C:\Users\Taner\Desktop\TelerikAlpha\ModuleThree\TeamWorkDB\TheAmazingBookStore\TheAmazingBookStore.Models\bin\Debug\TheAmazingBookStore.Models.pdb
+C:\Users\Taner\Desktop\TelerikAlpha\ModuleThree\TeamWorkDB\TheAmazingBookStore\TheAmazingBookStore.Models\obj\Debug\TheAmazingBookStore.Models.csprojResolveAssemblyReference.cache
+C:\Users\Taner\Desktop\TelerikAlpha\ModuleThree\TeamWorkDB\TheAmazingBookStore\TheAmazingBookStore.Models\obj\Debug\TheAmazingBookStore.Models.dll
+C:\Users\Taner\Desktop\TelerikAlpha\ModuleThree\TeamWorkDB\TheAmazingBookStore\TheAmazingBookStore.Models\obj\Debug\TheAmazingBookStore.Models.pdb

@@ -34,3 +34,7 @@ E:\Workspace\DemosCSharp\TheAmazingBookStore\TheAmazingBookStore\TheAmazingBookS
 E:\Workspace\DemosCSharp\TheAmazingBookStore\TheAmazingBookStore\TheAmazingBookStore.ConsoleClient\bin\Debug\Ninject.dll
 E:\Workspace\DemosCSharp\TheAmazingBookStore\TheAmazingBookStore\TheAmazingBookStore.ConsoleClient\bin\Debug\TheAmazingBookStore.Controller.pdb
 E:\Workspace\DemosCSharp\TheAmazingBookStore\TheAmazingBookStore\TheAmazingBookStore.ConsoleClient\bin\Debug\Ninject.xml
+C:\Users\Taner\Desktop\TelerikAlpha\ModuleThree\TeamWorkDB\TheAmazingBookStore\TheAmazingBookStore.ConsoleClient\bin\Debug\TheAmazingBookStore.ConsoleClient.exe.config
+C:\Users\Taner\Desktop\TelerikAlpha\ModuleThree\TeamWorkDB\TheAmazingBookStore\TheAmazingBookStore.ConsoleClient\obj\Debug\TheAmazingBookStore.ConsoleClient.exe
+C:\Users\Taner\Desktop\TelerikAlpha\ModuleThree\TeamWorkDB\TheAmazingBookStore\TheAmazingBookStore.ConsoleClient\obj\Debug\TheAmazingBookStore.ConsoleClient.pdb
+C:\Users\Taner\Desktop\TelerikAlpha\ModuleThree\TeamWorkDB\TheAmazingBookStore\TheAmazingBookStore.ConsoleClient\obj\Debug\TheAmazingBookStore.ConsoleClient.csprojResolveAssemblyReference.cache
