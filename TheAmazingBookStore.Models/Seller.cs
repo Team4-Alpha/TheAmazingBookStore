@@ -12,10 +12,7 @@ namespace TheAmazingBookStore.Models
 
         public string FirstName { get; set; }
 
-        public string LastName { get; set; }
-
-        public string Rating { get; set; }
-
+        public double LastName { get; set; }
         public ICollection<Country> Countries { get; set; }
         public ICollection<Book> Books { get; set; }
     }
