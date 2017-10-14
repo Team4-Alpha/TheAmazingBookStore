@@ -13,8 +13,13 @@ namespace TheAmazingBookStore.ConsoleClient
     {
         static void Main(string[] args)
         {
-            //TODO Configuration - Not Found
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<BookStoreContext, Configuration>());
+
+            using (var context = new BookStoreContext())
+            {
+                var books = context.Books.ToList();
+
+            }
         }
     }
 }
