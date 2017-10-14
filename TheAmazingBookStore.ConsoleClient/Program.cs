@@ -14,12 +14,7 @@ namespace TheAmazingBookStore.ConsoleClient
         static void Main(string[] args)
         {
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<BookStoreContext, Configuration>());
-
-            using (var context = new BookStoreContext())
-            {
-                var books = context.Books.ToList();
-
-            }
+            
         }
     }
 }

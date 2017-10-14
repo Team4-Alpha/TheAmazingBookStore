@@ -18,5 +18,6 @@ namespace TheAmazingBookStore.Models
 
         public decimal Price { get; set; }
         
+        public virtual ICollection<Seller> Sellers { get; set; }
     }
 }

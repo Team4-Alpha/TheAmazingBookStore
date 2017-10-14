@@ -40,3 +40,4 @@ C:\Users\Taner\Desktop\TelerikAlpha\ModuleThree\TeamWorkDB\TheAmazingBookStore\T
 C:\Users\Taner\Desktop\TelerikAlpha\ModuleThree\TeamWorkDB\TheAmazingBookStore\TheAmazingBookStore.Data\obj\Debug\TheAmazingBookStore.Data.csproj.GenerateResource.Cache
 C:\Users\Taner\Desktop\TelerikAlpha\ModuleThree\TeamWorkDB\TheAmazingBookStore\TheAmazingBookStore.Data\obj\Debug\TheAmazingBookStore.Data.dll
 C:\Users\Taner\Desktop\TelerikAlpha\ModuleThree\TeamWorkDB\TheAmazingBookStore\TheAmazingBookStore.Data\obj\Debug\TheAmazingBookStore.Data.pdb
+E:\Workspace\DemosCSharp\TheAmazingBookStore\TheAmazingBookStore\TheAmazingBookStore.Data\obj\Debug\TheAmazingBookStore.Data.Migrations.CountriesAndSellerAdded.resources

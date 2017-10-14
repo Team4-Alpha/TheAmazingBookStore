@@ -16,5 +16,9 @@ namespace TheAmazingBookStore.Data
         }
 
         public DbSet<Book> Books { get; set; }
+
+        public DbSet<Country> Countries { get; set; }
+
+        public DbSet<Seller> Sellers { get; set; }
     }
 }

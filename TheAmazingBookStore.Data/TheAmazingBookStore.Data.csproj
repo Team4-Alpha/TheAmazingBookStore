@@ -52,6 +52,10 @@
     <Compile Include="Migrations\201710132316313_Books Initial.Designer.cs">
       <DependentUpon>201710132316313_Books Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710142255567_CountriesAndSellerAdded.cs" />
+    <Compile Include="Migrations\201710142255567_CountriesAndSellerAdded.Designer.cs">
+      <DependentUpon>201710142255567_CountriesAndSellerAdded.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -68,6 +72,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201710132316313_Books Initial.resx">
       <DependentUpon>201710132316313_Books Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710142255567_CountriesAndSellerAdded.resx">
+      <DependentUpon>201710142255567_CountriesAndSellerAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
