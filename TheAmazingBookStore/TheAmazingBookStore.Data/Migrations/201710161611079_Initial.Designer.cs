@@ -7,13 +7,13 @@ namespace TheAmazingBookStore.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class BooksInitial : IMigrationMetadata
+    public sealed partial class Initial : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(BooksInitial));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Initial));
         
         string IMigrationMetadata.Id
         {
-            get { return "201710132316313_Books Initial"; }
+            get { return "201710161611079_Initial"; }
         }
         
         string IMigrationMetadata.Source
