@@ -8,6 +8,13 @@ namespace TheAmazingBookStore.Models
 {
     public class Book
     {
+        public Book()
+        {
+            this.Authors = new HashSet<Author>();
+            this.Genres = new HashSet<Genre>();
+            this.Sellers = new HashSet<Seller>();
+        }
+
         public int Id { get; set; }
 
         public string Title { get; set; }
