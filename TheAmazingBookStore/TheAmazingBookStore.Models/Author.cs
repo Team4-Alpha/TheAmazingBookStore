@@ -10,7 +10,7 @@ namespace TheAmazingBookStore.Models
 
         public double LastName { get; set; }
 
-        public ICollection<Country> Countries { get; set; }
+        public Country Country { get; set; }
 
         public virtual ICollection<Book> Books { get; set; }
     }

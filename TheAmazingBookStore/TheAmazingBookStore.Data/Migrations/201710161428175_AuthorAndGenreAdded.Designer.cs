@@ -13,7 +13,7 @@ namespace TheAmazingBookStore.Data.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201710160848541_AuthorAndGenreAdded"; }
+            get { return "201710161428175_AuthorAndGenreAdded"; }
         }
         
         string IMigrationMetadata.Source

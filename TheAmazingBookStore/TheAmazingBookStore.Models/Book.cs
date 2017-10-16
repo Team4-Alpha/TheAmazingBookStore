@@ -12,6 +12,10 @@ namespace TheAmazingBookStore.Models
 
         public string Title { get; set; }
 
+        public virtual ICollection<Author> Authors { get; set; }
+
+        public virtual ICollection<Genre> Genres { get; set; }
+
         public string Description { get; set; }
 
         public double Rating { get; set; }
@@ -19,5 +23,7 @@ namespace TheAmazingBookStore.Models
         public decimal Price { get; set; }
         
         public virtual ICollection<Seller> Sellers { get; set; }
+
+
     }
 }
