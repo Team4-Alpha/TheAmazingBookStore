@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TheAmazingBookStore.Controller.Core.Contracts
 {
-    interface IReader
+    public interface IReader
     {
         string ReadLine();
     }

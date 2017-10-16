@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstractions\IBookStoreContext.cs" />
     <Compile Include="BookStoreContext.cs" />
     <Compile Include="Migrations\201710161611079_Initial.cs" />
     <Compile Include="Migrations\201710161611079_Initial.Designer.cs">

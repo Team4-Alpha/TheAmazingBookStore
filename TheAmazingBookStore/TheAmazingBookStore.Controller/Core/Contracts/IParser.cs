@@ -7,7 +7,7 @@ using TheAmazingBookStore.Controller.Commands.Contracts;
 
 namespace TheAmazingBookStore.Controller.Core.Contracts
 {
-    interface IParser
+    public interface IParser
     {
         ICommand ParseCommand(string fullCommand);
 

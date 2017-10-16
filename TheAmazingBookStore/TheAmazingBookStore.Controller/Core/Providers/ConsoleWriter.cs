@@ -7,7 +7,7 @@ using TheAmazingBookStore.Controller.Core.Contracts;
 
 namespace TheAmazingBookStore.Controller.Core.Providers
 {
-    class ConsoleWriter : IWriter
+    public class ConsoleWriter : IWriter
     {
         public void Write(string text)
         {

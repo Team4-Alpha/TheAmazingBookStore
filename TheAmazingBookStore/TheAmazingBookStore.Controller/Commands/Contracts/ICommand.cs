@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace TheAmazingBookStore.Controller.Commands.Contracts
 {
-    interface ICommand
+    public interface ICommand
     {
-        void Execute(IList<string> parameters);
+        string Execute(IList<string> parameters);
     }
 }

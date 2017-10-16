@@ -7,7 +7,7 @@ using TheAmazingBookStore.Controller.Core.Contracts;
 
 namespace TheAmazingBookStore.Controller.Core.Providers
 {
-    class ConsoleReader : IReader
+    public class ConsoleReader : IReader
     {
         public string ReadLine()
         {

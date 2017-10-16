@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TheAmazingBookStore.Controller.Core.Factories
 {
-    class BookStoreFactory
+    public class BookStoreFactory:IBookStoreFactory
     {
     }
 }

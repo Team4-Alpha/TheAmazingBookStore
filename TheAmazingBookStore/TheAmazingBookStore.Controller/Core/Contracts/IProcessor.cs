@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TheAmazingBookStore.Controller.Core.Contracts
 {
-    interface IProcessor
+    public interface IProcessor
     {
         void ProcessCommand(string commandAsString);
     }

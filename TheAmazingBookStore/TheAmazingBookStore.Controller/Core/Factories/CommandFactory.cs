@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Bytes2you.Validation;
+using Ninject;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,12 +9,20 @@ using TheAmazingBookStore.Controller.Commands.Contracts;
 
 namespace TheAmazingBookStore.Controller.Core.Factories
 {
-    class CommandFactory : ICommandFactory
+    public class CommandFactory : ICommandFactory
     {
+        private readonly IKernel kernel;
+
+        public CommandFactory(IKernel kernel)
+        {
+            Guard.WhenArgument(kernel, "kernel").IsNull().Throw();
+
+            this.kernel = kernel;
+        }
+
         public ICommand CreateCommand(string commandName)
         {
-            //TODO
-            throw new NotImplementedException();
+            return this.kernel.Get<ICommand>(commandName);
         }
     }
 }

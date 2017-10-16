@@ -7,7 +7,7 @@ using TheAmazingBookStore.Controller.Commands.Contracts;
 
 namespace TheAmazingBookStore.Controller.Core.Factories
 {
-    interface ICommandFactory
+    public interface ICommandFactory
     {
         ICommand CreateCommand(string commandName);
     }

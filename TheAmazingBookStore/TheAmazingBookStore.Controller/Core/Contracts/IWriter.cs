@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TheAmazingBookStore.Controller.Core.Contracts
 {
-    interface IWriter
+    public interface IWriter
     {
         void Write(string text);
 
