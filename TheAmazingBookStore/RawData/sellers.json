@@ -1,0 +1,98 @@
+[
+    {
+        "firstName": "Anzhelo",
+        "lastName": "Petkov",
+        "country": "USA",
+        "books": [
+            "The Twelfth Card",
+            "The Snow Leopard",
+            "Out of the Dark"
+        ]
+    },
+    {
+        "firstName": "Iliya",
+        "lastName": "Damyanov",
+        "country": "Bulgaria",
+        "books":[ 
+            "Feverborn",
+            "The First World War"
+        ]
+    },
+    {
+        "firstName": "Taner",
+        "lastName": "Osmanov",
+        "country": "Switzerland",
+        "books": [
+            "The Snow Leopard"
+        ]
+    },
+    {
+        "firstName": "Murray",
+        "lastName": "Litt",
+        "country": "Canada",
+        "books":[
+            "Tom Clancy's Net Force: Breaking Point",
+            "The Mauritius Command"
+        ]
+    },
+    {
+        "firstName": "Rochelle",
+        "lastName": "Lawhorn",
+        "country": "United Kingdom",
+        "books":[
+            "Night Light: A Restoration Novel",
+            "Bayou Moon"
+
+        ]
+    },
+    {
+        "firstName": "Ramona",
+        "lastName": "Agustin",
+        "country": "Germany",
+        "books":[
+            "Chasing The Night",
+            "Billy Budd, Sailor"
+        ]
+    },
+    {
+        "firstName": "Joline",
+        "lastName": "Delahanty",
+        "country": "Japan",
+        "books":[
+            "A Theory of Justice"
+        ]
+    },
+    {
+        "firstName": "Judd",
+        "lastName": "Joline",
+        "country": "Sweden",
+        "books":[]
+    },
+    {
+        "firstName": "Keitha",
+        "lastName": "Wiechmann",
+        "country": "Australia",
+        "books":[
+            "The Mambo Kings Play Songs of Love",
+            "The Red Knight",
+            "The Mambo Kings Play Songs of Love"
+        ]
+
+    },
+    {
+        "firstName": "Jutras",
+        "lastName": "Theron",
+        "country": "France",
+        "books":[
+            "The Mambo Kings Play Songs of Love"
+        ]
+    },
+    {
+        "firstName": "Debra",
+        "lastName": "Kroh",
+        "country": "Norway",
+        "books":[
+            "The Red Knight"
+        ]
+    }
+]
