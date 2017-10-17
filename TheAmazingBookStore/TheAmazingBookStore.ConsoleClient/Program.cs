@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TheAmazingBookStore.Data;
-using TheAmazingBookStore.Data.Migrations;
+﻿using Ninject;
+using TheAmazingBookStore.ConsoleClient.Ninject;
+using TheAmazingBookStore.Controller.Core.Contracts;
 
 namespace TheAmazingBookStore.ConsoleClient
 {
@@ -13,8 +8,13 @@ namespace TheAmazingBookStore.ConsoleClient
     {
         static void Main(string[] args)
         {
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<BookStoreContext, Configuration>());
-            
+            //Database.SetInitializer(new MigrateDatabaseToLatestVersion<BookStoreContext, Configuration>());
+
+            IKernel kernel = new StandardKernel(new BookStoreConsoleModule());
+            IEngine engine = kernel.Get<IEngine>();
+
+            engine.Start();
+
         }
     }
 }

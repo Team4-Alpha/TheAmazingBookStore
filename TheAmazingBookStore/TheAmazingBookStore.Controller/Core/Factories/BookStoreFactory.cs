@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TheAmazingBookStore.Controller.Core.Factories
+﻿namespace TheAmazingBookStore.Controller.Core.Factories
 {
     public class BookStoreFactory:IBookStoreFactory
     {

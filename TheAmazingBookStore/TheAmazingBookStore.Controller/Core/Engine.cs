@@ -1,9 +1,5 @@
 ﻿using Bytes2you.Validation;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TheAmazingBookStore.Controller.Core.Contracts;
 
 namespace TheAmazingBookStore.Controller.Core
@@ -17,7 +13,7 @@ namespace TheAmazingBookStore.Controller.Core
         private readonly IParser parser;
         private readonly IProcessor processor;
 
-        public Engine(IReader reader, IWriter writer, IParser parser)
+        public Engine(IReader reader, IWriter writer, IParser parser, IProcessor processor)
         {
             Guard.WhenArgument(reader, "reader").IsNull().Throw();
             Guard.WhenArgument(writer, "writer").IsNull().Throw();
