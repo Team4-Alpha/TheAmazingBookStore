@@ -3,7 +3,7 @@ namespace TheAmazingBookStore.Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Initial : DbMigration
+    public partial class initial : DbMigration
     {
         public override void Up()
         {
@@ -13,7 +13,7 @@ namespace TheAmazingBookStore.Data.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         FirstName = c.String(),
-                        LastName = c.Double(nullable: false),
+                        LastName = c.String(),
                         CountryId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
@@ -51,7 +51,7 @@ namespace TheAmazingBookStore.Data.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         FirstName = c.String(),
-                        LastName = c.Double(nullable: false),
+                        LastName = c.String(),
                         CountryId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)

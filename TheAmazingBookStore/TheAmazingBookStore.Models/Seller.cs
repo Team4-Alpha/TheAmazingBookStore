@@ -17,7 +17,7 @@ namespace TheAmazingBookStore.Models
 
         public string FirstName { get; set; }
 
-        public double LastName { get; set; }
+        public string LastName { get; set; }
 
         public int CountryId { get; set; }
 
