@@ -20,10 +20,10 @@ namespace TheAmazingBookStore.ConsoleClient
         {
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<BookStoreContext, Configuration>());
 
-            //IKernel kernel = new StandardKernel(new BookStoreConsoleModule());
-            //IEngine engine = kernel.Get<IEngine>();
+            IKernel kernel = new StandardKernel(new BookStoreConsoleModule());
+            IEngine engine = kernel.Get<IEngine>();
 
-            //engine.Start();
+            engine.Start();
 
 
         }

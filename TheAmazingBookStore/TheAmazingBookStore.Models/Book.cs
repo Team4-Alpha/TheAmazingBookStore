@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace TheAmazingBookStore.Models
 {
@@ -12,17 +13,17 @@ namespace TheAmazingBookStore.Models
         }
 
         public int Id { get; set; }
-
+        
         public string Title { get; set; }
 
         public virtual ICollection<Author> Authors { get; set; }
-
+        
         public virtual ICollection<Genre> Genres { get; set; }
-
+        
         public string Description { get; set; }
-
+        
         public double Rating { get; set; }
-
+        
         public decimal Price { get; set; }
         
         public virtual ICollection<Seller> Sellers { get; set; }

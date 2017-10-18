@@ -1,4 +1,8 @@
 ﻿using Ninject.Modules;
+using TheAmazingBookStore.Controller.Commands.Contracts;
+using TheAmazingBookStore.Controller.Commands.Creating;
+using TheAmazingBookStore.Controller.Commands.Deleting;
+using TheAmazingBookStore.Controller.Commands.Update.BookUpdateCommands;
 using TheAmazingBookStore.Controller.Core;
 using TheAmazingBookStore.Controller.Core.Contracts;
 using TheAmazingBookStore.Controller.Core.Factories;
@@ -24,6 +28,12 @@ namespace TheAmazingBookStore.Controller.Ninject
 
             //TODO
             //Command bindings
+            this.Bind<ICommand>().To<CreateBookCommand>().Named("addbook");
+            this.Bind<ICommand>().To<DeleteBookCommand>().Named("deletebook");
+            this.Bind<ICommand>().To<UpdateBookTitle>().Named("updatebooktitle");
+            this.Bind<ICommand>().To<UpdateBookDescription>().Named("updatebookdescription");
+            this.Bind<ICommand>().To<UpdateBookRating>().Named("updatebookrating");
+            this.Bind<ICommand>().To<UpdateBookPrice>().Named("updatebookprice");
         }
     }
 }

@@ -2,17 +2,19 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using TheAmazingBookStore.Controller.Commands.Contracts;
 using TheAmazingBookStore.Data.Abstractions;
 using TheAmazingBookStore.Models;
 
-namespace TheAmazingBookStore.Controller.Commands.Creating
+namespace TheAmazingBookStore.Controller.Commands.Deleting
 {
-    public class CreateBookCommand : ICommand
+    public class DeleteBookCommand : ICommand
     {
         private readonly IBookStoreContext context;
 
-        public CreateBookCommand(IBookStoreContext context)
+        public DeleteBookCommand(IBookStoreContext context)
         {
             Guard.WhenArgument(context, "context").IsNull().Throw();
 
@@ -21,11 +23,11 @@ namespace TheAmazingBookStore.Controller.Commands.Creating
 
         public string Execute(IList<string> parameters)
         {
-            Book book = new Book();
-            this.context.Books.Add(book);
+            string title = parameters[0];
+            List<Book> books = this.context.Books.Where(b => b.Title == title).ToList();
+            this.context.Books.Remove(books[0]);
             this.context.SaveChanges();
-
-            return $"Book with Id {this.context.Books.ToList().Last().Id} was created.";
+            return "deleted";
         }
     }
 }
