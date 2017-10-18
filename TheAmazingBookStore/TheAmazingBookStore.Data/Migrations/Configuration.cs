@@ -56,7 +56,7 @@ namespace TheAmazingBookStore.Data.Migrations
             //    }
             //}
 
-            //SELLERS ADDING
+            
             //using (StreamReader reader = new StreamReader(@"E:\Workspace\DemosCSharp\TheAmazingBookStore\TheAmazingBookStore\TheAmazingBookStore\RawData\sellers.json"))
             //{
             //    string json = reader.ReadToEnd();
