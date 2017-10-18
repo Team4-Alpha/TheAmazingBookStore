@@ -24,8 +24,6 @@ namespace TheAmazingBookStore.ConsoleClient
             IEngine engine = kernel.Get<IEngine>();
 
             engine.Start();
-
-
         }
     }
 }
