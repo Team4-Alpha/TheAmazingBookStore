@@ -67,7 +67,9 @@
         "firstName": "Judd",
         "lastName": "Joline",
         "country": "Sweden",
-        "books":[]
+        "books":[
+            "Feverborn"
+        ]
     },
     {
         "firstName": "Keitha",
@@ -75,8 +77,7 @@
         "country": "Australia",
         "books":[
             "The Mambo Kings Play Songs of Love",
-            "The Red Knight",
-            "The Mambo Kings Play Songs of Love"
+            "The Red Knight"
         ]
 
     },
@@ -94,6 +95,77 @@
         "country": "Norway",
         "books":[
             "The Red Knight"
+        ]
+    },
+    {
+        "firstName": "Ben",
+        "lastName": "Gold",
+        "country": "USA",
+        "books":[
+            "The Famished Road",
+            "The Mambo Kings Play Songs of Love"
+        ]
+    },
+    {
+        "firstName": "Mark",
+        "lastName": "Sheppard",
+        "country": "Switzerland",
+        "books":[
+            "The Time-Traveller's Guide to Medieval England: A Handbook for Visitors to the Fourteenth Century",
+            "Out of the Dark"
+        ]
+    },
+    {
+        "firstName": "Anthony",
+        "lastName": "Joshua",
+        "country": "United Kingdom",
+        "books":[
+            "Girls & Sex: Navigating the Complicated New Landscape",
+            "The Fell Sword"
+        ]
+    },
+    {
+        "firstName": "Cristiana",
+        "lastName": "Fanelli",
+        "country": "Canada",
+        "books":[
+            "The Face Of Deception",
+            "The Burial Hour"
+        ]
+    },
+    {
+        "firstName": "Ben",
+        "lastName": "Shapiro",
+        "country": "Germany",
+        "books":[
+            "Cinderella Ate My Daughter: Dispatches from the Frontlines of the New Girlie-Girl Culture",
+            "The Everafter War (The Sisters Grimm, #7)"
+        ]
+    },
+    {
+        "firstName": "Tamara",
+        "lastName": "Kalinic",
+        "country": "Sweden",
+        "books":[
+            "Means of Ascent",
+            "Shadow Country"
+        ]
+    },
+    {
+        "firstName": "Kim",
+        "lastName": "Jong",
+        "country": "Japan",
+        "books":[
+            "The Age of Magic",
+            "Post Captain"
+        ]
+    },
+    {
+        "firstName": "Hillary",
+        "lastName": "Blacksmith",
+        "country": "Australia",
+        "books":[
+            "Bartleby the Scrivener"
         ]
     }
 ]
