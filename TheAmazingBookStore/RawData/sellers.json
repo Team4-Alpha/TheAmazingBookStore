@@ -1,4 +1,5 @@
-[
+{
+"sellers": [
     {
         "firstName": "Anzhelo",
         "lastName": "Petkov",
@@ -96,3 +97,4 @@
         ]
     }
 ]
+}

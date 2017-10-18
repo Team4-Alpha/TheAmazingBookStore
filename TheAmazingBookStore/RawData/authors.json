@@ -1,4 +1,5 @@
-[
+{
+    "authors": [
     {
         "firstName": "Jeffery",
         "lastName": "Deaver",
@@ -183,4 +184,5 @@
             "Tom Clancy's Net Force: Breaking Point"
         ]
     }
-]
+    ]
+}
