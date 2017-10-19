@@ -49,7 +49,9 @@
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Ninject, Version=3.3.1.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7" />
+    <Reference Include="Ninject, Version=3.3.1.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.3.1\lib\net45\Ninject.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -94,10 +96,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TheAmazingBookStore.Controller\TheAmazingBookStore.Controller.csproj">
-      <Project>{72fd4e59-ddd7-4d0c-bea9-f39f0aac7022}</Project>
-      <Name>TheAmazingBookStore.Controller</Name>
-    </ProjectReference>
     <ProjectReference Include="..\TheAmazingBookStore.Data\TheAmazingBookStore.Data.csproj">
       <Project>{3ecbf42c-17cf-473f-b9c3-b2fd8c1bdf3c}</Project>
       <Name>TheAmazingBookStore.Data</Name>
