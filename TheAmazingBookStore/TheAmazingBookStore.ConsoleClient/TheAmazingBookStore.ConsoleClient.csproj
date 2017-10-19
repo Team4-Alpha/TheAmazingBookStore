@@ -38,6 +38,10 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="itextsharp, Version=5.5.12.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.12\lib\itextsharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
       <Private>True</Private>
@@ -93,7 +97,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TheAmazingBookStore.Controller\TheAmazingBookStore.Controller.csproj">
-      <Project>{72FD4E59-DDD7-4D0C-BEA9-F39F0AAC7022}</Project>
+      <Project>{72fd4e59-ddd7-4d0c-bea9-f39f0aac7022}</Project>
       <Name>TheAmazingBookStore.Controller</Name>
     </ProjectReference>
     <ProjectReference Include="..\TheAmazingBookStore.Data\TheAmazingBookStore.Data.csproj">

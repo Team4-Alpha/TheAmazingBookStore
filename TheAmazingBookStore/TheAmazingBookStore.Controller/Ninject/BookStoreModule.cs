@@ -1,17 +1,18 @@
 ﻿using Ninject.Modules;
+using TheAmazingBookStore.Controller.Commands;
 using TheAmazingBookStore.Controller.Commands.Contracts;
 using TheAmazingBookStore.Controller.Commands.Creating;
 using TheAmazingBookStore.Controller.Commands.Deleting;
 using TheAmazingBookStore.Controller.Commands.FindCommand;
-using TheAmazingBookStore.Controller.Commands.Update.BookUpdateCommands;
-using TheAmazingBookStore.Controller.Commands.Update.CountryUpdateCommands;
-using TheAmazingBookStore.Controller.Commands.Update.GenreUpdateCommands;
 using TheAmazingBookStore.Controller.Core;
 using TheAmazingBookStore.Controller.Core.Contracts;
 using TheAmazingBookStore.Controller.Core.Factories;
 using TheAmazingBookStore.Controller.Core.Providers;
 using TheAmazingBookStore.Data;
 using TheAmazingBookStore.Data.Abstractions;
+using TheAmazingBookStore.Controller.Commands.Updating.BookUpdateCommands;
+using TheAmazingBookStore.Controller.Commands.Updating.CountryUpdateCommands;
+using TheAmazingBookStore.Controller.Commands.Updating.GenreUpdateCommands;
 
 namespace TheAmazingBookStore.Controller.Ninject
 {
@@ -23,23 +24,31 @@ namespace TheAmazingBookStore.Controller.Ninject
 
             this.Bind<IProcessor>().To<CommandProcessor>();
             this.Bind<IParser>().To<CommandParser>();
-
-            this.Bind<IBookStoreFactory>().To<BookStoreFactory>().InSingletonScope();
+            
             this.Bind<ICommandFactory>().To<CommandFactory>().InSingletonScope();
 
             this.Bind<IEngine>().To<Engine>().InSingletonScope();
-            this.Bind<ICommand>().To<FindBookCommand>().InSingletonScope().Named("findbook"); ;
-            //TODO
-            //Command bindings
-            this.Bind<ICommand>().To<CreateBookCommand>().Named("addbook");
-            this.Bind<ICommand>().To<DeleteBookCommand>().Named("deletebook");
-            this.Bind<ICommand>().To<UpdateBookTitle>().Named("updatebooktitle");
+
+            //CREATE COMMANDS
+            this.Bind<ICommand>().To<CreateBookCommand>().Named("createbook");
+            this.Bind<ICommand>().To<CreateCountryCommand>().Named("createcountry");
+            this.Bind<ICommand>().To<CreateGenreCommand>().Named("creategenre");
+            this.Bind<ICommand>().To<CreatePdfCommand>().InSingletonScope().Named("createpdf");
+
+            //READ COMMANDS
+            this.Bind<ICommand>().To<FindBookCommand>().InSingletonScope().Named("findbook");
+
+            //UPDATE COMMANDS
             this.Bind<ICommand>().To<UpdateBookDescription>().Named("updatebookdescription");
-            this.Bind<ICommand>().To<UpdateBookRating>().Named("updatebookrating");
             this.Bind<ICommand>().To<UpdateBookPrice>().Named("updatebookprice");
+            this.Bind<ICommand>().To<UpdateBookRating>().Named("updatebookrating");
+            this.Bind<ICommand>().To<UpdateBookTitle>().Named("updatebooktitle");
             this.Bind<ICommand>().To<UpdateCountryName>().Named("updatecountryname");
             this.Bind<ICommand>().To<UpdateGenreDescription>().Named("updategenredescription");
             this.Bind<ICommand>().To<UpdateGenreName>().Named("updategenrename");
+
+            //DELETE COMMANDS
+            this.Bind<ICommand>().To<DeleteBookCommand>().Named("deletebook");          
         }
     }
 }

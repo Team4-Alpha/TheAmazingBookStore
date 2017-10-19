@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 using TheAmazingBookStore.Controller.Commands.Contracts;
 using TheAmazingBookStore.Data.Abstractions;
 
-namespace TheAmazingBookStore.Controller.Commands.Update.GenreUpdateCommands
+namespace TheAmazingBookStore.Controller.Commands.Updating.GenreUpdateCommands
 {
-    public class UpdateGenreDescription : ICommand
+    public class UpdateGenreName : ICommand
     {
         private readonly IBookStoreContext context;
 
-        public UpdateGenreDescription(IBookStoreContext context)
+        public UpdateGenreName(IBookStoreContext context)
         {
             Guard.WhenArgument(context, "context").IsNull().Throw();
 
@@ -23,15 +23,15 @@ namespace TheAmazingBookStore.Controller.Commands.Update.GenreUpdateCommands
         public string Execute(IList<string> parameters)
         {
             int genreId = int.Parse(parameters[0]);
-            string newDescription = string.Empty;
+            string newName = string.Empty;
             for (int i = 1; i < parameters.Count(); i++)
             {
-                newDescription += parameters[i] + " ";
+                newName += parameters[i] + " ";
             }
-            newDescription = newDescription.TrimEnd(' ');
-            this.context.Genres.Where(g => g.Id == genreId).ToList()[0].Description = newDescription;
+            newName = newName.TrimEnd(' ');
+            this.context.Genres.Where(g => g.Id == genreId).ToList()[0].Name = newName;
             this.context.SaveChanges();
-            return $"The genre's description has been changed to \"{this.context.Genres.Where(g => g.Id == genreId).ToList()[0].Description}\".";
+            return $"The genre's name has been changed to \"{this.context.Genres.Where(g => g.Id == genreId).ToList()[0].Name}\".";
         }
     }
 }

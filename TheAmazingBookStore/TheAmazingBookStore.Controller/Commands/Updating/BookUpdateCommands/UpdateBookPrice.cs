@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 using TheAmazingBookStore.Controller.Commands.Contracts;
 using TheAmazingBookStore.Data.Abstractions;
 
-namespace TheAmazingBookStore.Controller.Commands.Update.BookUpdateCommands
+namespace TheAmazingBookStore.Controller.Commands.Updating.BookUpdateCommands
 {
-    public class UpdateBookRating : ICommand
+    public class UpdateBookPrice : ICommand
     {
         private readonly IBookStoreContext context;
 
-        public UpdateBookRating(IBookStoreContext context)
+        public UpdateBookPrice(IBookStoreContext context)
         {
             Guard.WhenArgument(context, "context").IsNull().Throw();
 
@@ -23,10 +23,10 @@ namespace TheAmazingBookStore.Controller.Commands.Update.BookUpdateCommands
         public string Execute(IList<string> parameters)
         {
             int bookId = int.Parse(parameters[0]);
-            double newRating = double.Parse(parameters[1]);
-            this.context.Books.Where(b => b.Id == bookId).ToList()[0].Rating = newRating;
+            decimal newPrice = decimal.Parse(parameters[1]);
+            this.context.Books.Where(b => b.Id == bookId).ToList()[0].Price = newPrice;
             this.context.SaveChanges();
-            return $"The book's rating has been changed to \"{this.context.Books.Where(b => b.Id == bookId).ToList()[0].Rating}\".";
+            return $"The book's price has been changed to \"{this.context.Books.Where(b => b.Id == bookId).ToList()[0].Price}\".";
         }
     }
 }

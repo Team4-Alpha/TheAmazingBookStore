@@ -12,7 +12,7 @@ using TheAmazingBookStore.Models;
 
 namespace TheAmazingBookStore.Controller.Commands.FindCommand
 {
-    class FindBookCommand : ICommand
+   public class FindBookCommand : ICommand
     {
         private readonly IBookStoreContext context;
 
@@ -22,7 +22,7 @@ namespace TheAmazingBookStore.Controller.Commands.FindCommand
             this.context = context;
         }
 
-        public string Execute(IList<string> parameters)
+        public virtual string Execute(IList<string> parameters)
         {
             string find="";
             string title;
@@ -65,8 +65,9 @@ namespace TheAmazingBookStore.Controller.Commands.FindCommand
             }
             
 
-            return ($"Title = {title}"+ Environment.NewLine+ $"Genres = {genres}" + $"Author = {author}" + Environment.NewLine +
+            var result= ($"Title = {title}"+ Environment.NewLine+ $"Genres = {genres}" + $"Author = {author}" + Environment.NewLine +
                $"Description ={description}") ;
+            return result;
         }
     }
 }

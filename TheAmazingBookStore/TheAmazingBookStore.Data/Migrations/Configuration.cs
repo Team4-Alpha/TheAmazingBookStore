@@ -43,12 +43,12 @@ namespace TheAmazingBookStore.Data.Migrations
             this.AuthorSeed(context);
             context.SaveChanges();
         }
-
+        
         private void CountrySeed(BookStoreContext context)
         {
             if (!context.Countries.Any())
             {
-                using (StreamReader reader = new StreamReader(@"C:\Users\IliyaDamyanov\Documents\Programming\Telerik-Academy-Alpha\Databases\SQL\Team-project\TheAmazingBookStore\RawData\countries.json"))
+                using (StreamReader reader = new StreamReader(@"C:\Users\Taner\Desktop\TelerikAlpha\ModuleThree\TeamWorkDB\TheAmazingBookStore\TheAmazingBookStore\RawData\countries.json"))
                 {
                     string json = reader.ReadToEnd();
 
@@ -66,7 +66,7 @@ namespace TheAmazingBookStore.Data.Migrations
         {
             if (!context.Genres.Any())
             {
-                using (StreamReader reader = new StreamReader(@"C:\Users\IliyaDamyanov\Documents\Programming\Telerik-Academy-Alpha\Databases\SQL\Team-project\TheAmazingBookStore\RawData\genres.json"))
+                using (StreamReader reader = new StreamReader(@"C:\Users\Taner\Desktop\TelerikAlpha\ModuleThree\TeamWorkDB\TheAmazingBookStore\TheAmazingBookStore\RawData\genres.json"))
                 {
                     string json = reader.ReadToEnd();
 
@@ -84,7 +84,7 @@ namespace TheAmazingBookStore.Data.Migrations
         {
             if (!context.Sellers.Any())
             {
-                using (StreamReader reader = new StreamReader(@"C:\Users\IliyaDamyanov\Documents\Programming\Telerik-Academy-Alpha\Databases\SQL\Team-project\TheAmazingBookStore\RawData\sellers.json"))
+                using (StreamReader reader = new StreamReader(@"C:\Users\Taner\Desktop\TelerikAlpha\ModuleThree\TeamWorkDB\TheAmazingBookStore\TheAmazingBookStore\RawData\sellers.json"))
                 {
                     string json = reader.ReadToEnd();
                     dynamic parsed = JObject.Parse(json);
@@ -115,7 +115,7 @@ namespace TheAmazingBookStore.Data.Migrations
         {
             if (!context.Books.Any())
             {
-                using (StreamReader reader = new StreamReader(@"C:\Users\IliyaDamyanov\Documents\Programming\Telerik-Academy-Alpha\Databases\SQL\Team-project\TheAmazingBookStore\RawData\books.json"))
+                using (StreamReader reader = new StreamReader(@"C:\Users\Taner\Desktop\TelerikAlpha\ModuleThree\TeamWorkDB\TheAmazingBookStore\TheAmazingBookStore\RawData\books.json"))
                 {
                     string json = reader.ReadToEnd();
                     dynamic parsed = JObject.Parse(json);
@@ -155,7 +155,7 @@ namespace TheAmazingBookStore.Data.Migrations
         {
             if (!context.Authors.Any())
             {
-                using (StreamReader reader = new StreamReader(@"C:\Users\IliyaDamyanov\Documents\Programming\Telerik-Academy-Alpha\Databases\SQL\Team-project\TheAmazingBookStore\RawData\authors.json"))
+                using (StreamReader reader = new StreamReader(@"C:\Users\Taner\Desktop\TelerikAlpha\ModuleThree\TeamWorkDB\TheAmazingBookStore\TheAmazingBookStore\RawData\authors.json"))
                 {
                     string json = reader.ReadToEnd();
                     dynamic parsed = JObject.Parse(json);

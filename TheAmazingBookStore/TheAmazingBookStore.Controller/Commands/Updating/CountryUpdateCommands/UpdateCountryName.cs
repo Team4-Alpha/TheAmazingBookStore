@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 using TheAmazingBookStore.Controller.Commands.Contracts;
 using TheAmazingBookStore.Data.Abstractions;
 
-namespace TheAmazingBookStore.Controller.Commands.Update.GenreUpdateCommands
+namespace TheAmazingBookStore.Controller.Commands.Updating.CountryUpdateCommands
 {
-    public class UpdateGenreName : ICommand
+    public class UpdateCountryName : ICommand
     {
         private readonly IBookStoreContext context;
 
-        public UpdateGenreName(IBookStoreContext context)
+        public UpdateCountryName(IBookStoreContext context)
         {
             Guard.WhenArgument(context, "context").IsNull().Throw();
 
@@ -22,16 +22,16 @@ namespace TheAmazingBookStore.Controller.Commands.Update.GenreUpdateCommands
 
         public string Execute(IList<string> parameters)
         {
-            int genreId = int.Parse(parameters[0]);
+            int countryId = int.Parse(parameters[0]);
             string newName = string.Empty;
             for (int i = 1; i < parameters.Count(); i++)
             {
                 newName += parameters[i] + " ";
             }
             newName = newName.TrimEnd(' ');
-            this.context.Genres.Where(g => g.Id == genreId).ToList()[0].Name = newName;
+            this.context.Countries.Where(c => c.Id == countryId).ToList()[0].Name = newName;
             this.context.SaveChanges();
-            return $"The genre's name has been changed to \"{this.context.Genres.Where(g => g.Id == genreId).ToList()[0].Name}\".";
+            return $"The country's name has been changed to \"{this.context.Countries.Where(c => c.Id == countryId).ToList()[0].Name}\".";
         }
     }
 }
