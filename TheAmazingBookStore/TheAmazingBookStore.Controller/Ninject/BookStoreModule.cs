@@ -1,4 +1,5 @@
 ﻿using Ninject.Modules;
+using TheAmazingBookStore.Controller.Commands;
 using TheAmazingBookStore.Controller.Commands.Contracts;
 using TheAmazingBookStore.Controller.Commands.FindCommand;
 using TheAmazingBookStore.Controller.Core;
@@ -23,7 +24,8 @@ namespace TheAmazingBookStore.Controller.Ninject
             this.Bind<ICommandFactory>().To<CommandFactory>().InSingletonScope();
 
             this.Bind<IEngine>().To<Engine>().InSingletonScope();
-            this.Bind<ICommand>().To<FindBookCommand>().InSingletonScope().Named("findbook"); ;
+            this.Bind<ICommand>().To<FindBookCommand>().InSingletonScope().Named("findbook");
+            this.Bind<ICommand>().To<PdfReporter>().InSingletonScope().Named("createpdf"); 
             //TODO
             //Command bindings
         }
