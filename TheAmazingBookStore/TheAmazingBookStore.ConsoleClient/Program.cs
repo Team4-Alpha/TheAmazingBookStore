@@ -1,16 +1,9 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using Ninject;
-using System;
-using System.Collections.Generic;
+﻿using Ninject;
 using System.Data.Entity;
-using System.IO;
-using System.Linq;
 using TheAmazingBookStore.ConsoleClient.Ninject;
 using TheAmazingBookStore.Controller.Core.Contracts;
 using TheAmazingBookStore.Data;
 using TheAmazingBookStore.Data.Migrations;
-using TheAmazingBookStore.Models;
 
 namespace TheAmazingBookStore.ConsoleClient
 {

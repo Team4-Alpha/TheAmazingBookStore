@@ -72,6 +72,8 @@
     <Compile Include="Commands\Updating\CountryUpdateCommands\UpdateCountryNameTests\Constructor_Should.cs" />
     <Compile Include="Commands\Updating\GenreUpdateCommands\UpdateGenreDescriptionTests\Constructor_Should.cs" />
     <Compile Include="Commands\Updating\GenreUpdateCommands\UpdateGenreNameTests\Constructor_Should.cs" />
+    <Compile Include="Core\EngineTests\Constructor_Should.cs" />
+    <Compile Include="Core\EngineTests\Start_Should.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -81,7 +83,6 @@
   <ItemGroup>
     <Folder Include="Commands\Creating\CreatePdfCommandTests\" />
     <Folder Include="Commands\Finding\FindBookCommandTests\" />
-    <Folder Include="Core\EngineTests\" />
     <Folder Include="Core\Factories\CommandFactoryTests\" />
     <Folder Include="Core\Providers\CommandParserTests\" />
     <Folder Include="Core\Providers\CommandProcessorTests\" />

@@ -4,17 +4,17 @@ using TheAmazingBookStore.Controller.Commands.Contracts;
 using TheAmazingBookStore.Controller.Commands.Creating;
 using TheAmazingBookStore.Controller.Commands.Deleting;
 using TheAmazingBookStore.Controller.Commands.FindCommand;
+using TheAmazingBookStore.Controller.Commands.Seeding;
+using TheAmazingBookStore.Controller.Commands.Updating.AuthorUpdateCommands;
+using TheAmazingBookStore.Controller.Commands.Updating.BookUpdateCommands;
+using TheAmazingBookStore.Controller.Commands.Updating.CountryUpdateCommands;
+using TheAmazingBookStore.Controller.Commands.Updating.GenreUpdateCommands;
 using TheAmazingBookStore.Controller.Core;
 using TheAmazingBookStore.Controller.Core.Contracts;
 using TheAmazingBookStore.Controller.Core.Factories;
 using TheAmazingBookStore.Controller.Core.Providers;
 using TheAmazingBookStore.Data;
 using TheAmazingBookStore.Data.Abstractions;
-using TheAmazingBookStore.Controller.Commands.Seeding;
-using TheAmazingBookStore.Controller.Commands.Updating.BookUpdateCommands;
-using TheAmazingBookStore.Controller.Commands.Updating.CountryUpdateCommands;
-using TheAmazingBookStore.Controller.Commands.Updating.GenreUpdateCommands;
-using TheAmazingBookStore.Controller.Commands.Updating.AuthorUpdateCommands;
 namespace TheAmazingBookStore.Controller.Ninject
 {
     public class BookStoreModule : NinjectModule

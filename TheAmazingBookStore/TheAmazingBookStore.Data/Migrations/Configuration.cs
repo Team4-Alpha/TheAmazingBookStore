@@ -1,10 +1,4 @@
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System.Collections.Generic;
 using System.Data.Entity.Migrations;
-using System.IO;
-using System.Linq;
-using TheAmazingBookStore.Models;
 
 namespace TheAmazingBookStore.Data.Migrations
 {

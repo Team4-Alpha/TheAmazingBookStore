@@ -1,9 +1,5 @@
 ﻿using Bytes2you.Validation;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TheAmazingBookStore.Controller.Commands.Contracts;
 using TheAmazingBookStore.Data.Abstractions;
 
@@ -24,9 +20,9 @@ namespace TheAmazingBookStore.Controller.Commands.Updating.BookUpdateCommands
         {
             int bookId = int.Parse(parameters[0]);
             decimal newPrice = decimal.Parse(parameters[1]);
-            this.context.Books.Where(b => b.Id == bookId).ToList()[0].Price = newPrice;
+            this.context.Books.Find(bookId).Price = newPrice;
             this.context.SaveChanges();
-            return $"The book's price has been changed to \"{this.context.Books.Where(b => b.Id == bookId).ToList()[0].Price}\".";
+            return $"The book's price has been changed to \"{this.context.Books.Find(bookId).Price}\".";
         }
     }
 }

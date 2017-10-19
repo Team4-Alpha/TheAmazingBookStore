@@ -1,18 +1,12 @@
 ﻿using Bytes2you.Validation;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
-using iTextSharp.text.pdf.parser;
-using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TheAmazingBookStore.Controller.Commands.Contracts;
 using TheAmazingBookStore.Controller.Commands.FindCommand;
 using TheAmazingBookStore.Data;
 using TheAmazingBookStore.Data.Abstractions;
-using TheAmazingBookStore.Models;
 
 namespace TheAmazingBookStore.Controller.Commands
 {

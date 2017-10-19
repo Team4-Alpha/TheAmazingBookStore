@@ -2,9 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Remoting.Contexts;
-using System.Text;
-using System.Threading.Tasks;
 using TheAmazingBookStore.Controller.Commands.Contracts;
 using TheAmazingBookStore.Data;
 using TheAmazingBookStore.Data.Abstractions;
@@ -12,13 +9,14 @@ using TheAmazingBookStore.Models;
 
 namespace TheAmazingBookStore.Controller.Commands.FindCommand
 {
-   public class FindBookCommand : ICommand
+    public class FindBookCommand : ICommand
     {
         private readonly IBookStoreContext context;
 
         public FindBookCommand(BookStoreContext context)
         {
             Guard.WhenArgument(context, "context").IsNull().Throw();
+
             this.context = context;
         }
 
@@ -34,20 +32,17 @@ namespace TheAmazingBookStore.Controller.Commands.FindCommand
                 for (int i = 0; i < parameters.Count; i++)
                 {
                     find += (parameters[i]+" ");
-                }
-                
-               
+                }           
             }
             catch
             {
                 throw new ArgumentException("Failed parse");
             }
 
-            List<Book> books= this.context.Books.Where(x=>x.Title==find).ToList();
-            if (books.Count!=0)
+            Book book= this.context.Books.FirstOrDefault(x=>x.Title==find);
+            if (book != null)
             {
-                Book book = books[0];
-                 title = book.Title;
+                title = book.Title;
                 foreach (var item in book.Genres)
                 {
                     genres += (item.Name +Environment.NewLine);
@@ -64,8 +59,7 @@ namespace TheAmazingBookStore.Controller.Commands.FindCommand
                 throw new ArgumentException("Book not found");
             }
             
-
-            var result= ($"Title = {title}"+ Environment.NewLine+ $"Genres = {genres}" + $"Author = {author}" + Environment.NewLine +
+            var result= ($"Title = {title}" + Environment.NewLine + $"Genres = {genres}" + $"Author = {author}" + Environment.NewLine +
                $"Description ={description}") ;
             return result;
         }
