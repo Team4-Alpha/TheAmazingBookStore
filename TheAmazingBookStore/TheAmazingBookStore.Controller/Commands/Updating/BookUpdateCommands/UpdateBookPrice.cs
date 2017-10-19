@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using TheAmazingBookStore.Controller.Commands.Contracts;
 using TheAmazingBookStore.Data.Abstractions;
 
-namespace TheAmazingBookStore.Controller.Commands.Update.BookUpdateCommands
+namespace TheAmazingBookStore.Controller.Commands.Updating.BookUpdateCommands
 {
     public class UpdateBookPrice : ICommand
     {
@@ -26,7 +26,7 @@ namespace TheAmazingBookStore.Controller.Commands.Update.BookUpdateCommands
             decimal newPrice = decimal.Parse(parameters[1]);
             this.context.Books.Where(b => b.Id == bookId).ToList()[0].Price = newPrice;
             this.context.SaveChanges();
-            return $"Book's title has been changed to \"{this.context.Books.Where(b => b.Id == bookId).ToList()[0].Price}\".";
+            return $"The book's price has been changed to \"{this.context.Books.Where(b => b.Id == bookId).ToList()[0].Price}\".";
         }
     }
 }

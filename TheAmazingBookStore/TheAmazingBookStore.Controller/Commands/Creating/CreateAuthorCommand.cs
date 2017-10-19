@@ -6,14 +6,14 @@ using System.Text;
 using System.Threading.Tasks;
 using TheAmazingBookStore.Controller.Commands.Contracts;
 using TheAmazingBookStore.Data.Abstractions;
+using TheAmazingBookStore.Models;
 
-namespace TheAmazingBookStore.Controller.Commands.Updating.BookUpdateCommands
+namespace TheAmazingBookStore.Controller.Commands.Creating
 {
-    public class UpdateBookRating : ICommand
+    public class CreateAuthorCommand : ICommand
     {
         private readonly IBookStoreContext context;
-
-        public UpdateBookRating(IBookStoreContext context)
+        public CreateAuthorCommand(IBookStoreContext context)
         {
             Guard.WhenArgument(context, "context").IsNull().Throw();
 
@@ -22,11 +22,11 @@ namespace TheAmazingBookStore.Controller.Commands.Updating.BookUpdateCommands
 
         public string Execute(IList<string> parameters)
         {
-            int bookId = int.Parse(parameters[0]);
-            double newRating = double.Parse(parameters[1]);
-            this.context.Books.Where(b => b.Id == bookId).ToList()[0].Rating = newRating;
+            Author author = new Author();
+            this.context.Authors.Add(author);
             this.context.SaveChanges();
-            return $"The book's rating has been changed to \"{this.context.Books.Where(b => b.Id == bookId).ToList()[0].Rating}\".";
+
+            return $"Author with Id {this.context.Authors.ToList().Last().Id} was created.";
         }
     }
 }

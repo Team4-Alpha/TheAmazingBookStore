@@ -24,8 +24,7 @@ namespace TheAmazingBookStore.Controller.Commands.Deleting
         public string Execute(IList<string> parameters)
         {
             string title = parameters[0];
-            List<Book> books = this.context.Books.Where(b => b.Title == title).ToList();
-            this.context.Books.Remove(books[0]);
+            this.context.Books.Remove(this.context.Books.Where(b => b.Title == title).ToList()[0]);
             this.context.SaveChanges();
             return "deleted";
         }

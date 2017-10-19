@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\MSTest.TestAdapter.1.1.18\build\net45\MSTest.TestAdapter.props" Condition="Exists('..\packages\MSTest.TestAdapter.1.1.18\build\net45\MSTest.TestAdapter.props')" />
+  <Import Project="..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props" Condition="Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -38,35 +38,67 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.4.2.1\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\MSTest.TestFramework.1.1.18\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
+      <HintPath>..\packages\MSTest.TestFramework.1.2.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\MSTest.TestFramework.1.1.18\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
+      <HintPath>..\packages\MSTest.TestFramework.1.2.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Moq, Version=4.7.142.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <HintPath>..\packages\Moq.4.7.142\lib\net45\Moq.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\Creating\CreateBookCommandTests\Constructor_Should.cs" />
+    <Compile Include="Commands\Creating\CreateBookCommandTests\Execute_Should.cs" />
+    <Compile Include="Commands\Deleting\DeleteBookCommandTests\Constructor_Should.cs" />
+    <Compile Include="Commands\Updating\BookUpdateCommands\UpdateBookDescriptionTests\Constructor_Should.cs" />
+    <Compile Include="Commands\Updating\BookUpdateCommands\UpdateBookPriceTests\Constructor_Should.cs" />
+    <Compile Include="Commands\Updating\BookUpdateCommands\UpdateBookRatingTests\Constructor_Should.cs" />
+    <Compile Include="Commands\Updating\BookUpdateCommands\UpdateBookTitleTests\Constructor_Should.cs" />
+    <Compile Include="Commands\Updating\CountryUpdateCommands\UpdateCountryNameTests\Constructor_Should.cs" />
+    <Compile Include="Commands\Updating\GenreUpdateCommands\UpdateGenreDescriptionTests\Constructor_Should.cs" />
+    <Compile Include="Commands\Updating\GenreUpdateCommands\UpdateGenreNameTests\Constructor_Should.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Commands\Creating\CreateBookCommandTests\" />
     <Folder Include="Commands\Creating\CreatePdfCommandTests\" />
-    <Folder Include="Commands\Deleting\DeleteBookCommandTests\" />
     <Folder Include="Commands\Finding\FindBookCommandTests\" />
-    <Folder Include="Commands\Updating\BookUpdateCommands\UpdateBookDescriptionTests\" />
-    <Folder Include="Commands\Updating\BookUpdateCommands\UpdateBookPriceTests\" />
-    <Folder Include="Commands\Updating\BookUpdateCommands\UpdateBookRatingTests\" />
-    <Folder Include="Commands\Updating\BookUpdateCommands\UpdateBookTitleTests\" />
-    <Folder Include="Commands\Updating\CountryUpdateCommands\UpdateCountryNameTests\" />
     <Folder Include="Core\EngineTests\" />
     <Folder Include="Core\Factories\CommandFactoryTests\" />
     <Folder Include="Core\Providers\CommandParserTests\" />
     <Folder Include="Core\Providers\CommandProcessorTests\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TheAmazingBookStore.Controller\TheAmazingBookStore.Controller.csproj">
+      <Project>{72FD4E59-DDD7-4D0C-BEA9-F39F0AAC7022}</Project>
+      <Name>TheAmazingBookStore.Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TheAmazingBookStore.Data\TheAmazingBookStore.Data.csproj">
+      <Project>{3ECBF42C-17CF-473F-B9C3-B2FD8C1BDF3C}</Project>
+      <Name>TheAmazingBookStore.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TheAmazingBookStore.Models\TheAmazingBookStore.Models.csproj">
+      <Project>{DA706001-063B-4760-BE90-6B936C51722D}</Project>
+      <Name>TheAmazingBookStore.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
@@ -74,8 +106,8 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.1.18\build\net45\MSTest.TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.1.18\build\net45\MSTest.TestAdapter.props'))" />
-    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.1.18\build\net45\MSTest.TestAdapter.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.1.18\build\net45\MSTest.TestAdapter.targets'))" />
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props'))" />
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets'))" />
   </Target>
-  <Import Project="..\packages\MSTest.TestAdapter.1.1.18\build\net45\MSTest.TestAdapter.targets" Condition="Exists('..\packages\MSTest.TestAdapter.1.1.18\build\net45\MSTest.TestAdapter.targets')" />
+  <Import Project="..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets" Condition="Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets')" />
 </Project>
