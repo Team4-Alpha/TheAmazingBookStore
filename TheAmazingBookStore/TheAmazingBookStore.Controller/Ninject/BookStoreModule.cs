@@ -27,16 +27,23 @@ namespace TheAmazingBookStore.Controller.Ninject
             this.Bind<ICommandFactory>().To<CommandFactory>().InSingletonScope();
 
             this.Bind<IEngine>().To<Engine>().InSingletonScope();
+
+            //CREATE COMMANDS
+            this.Bind<ICommand>().To<CreateBookCommand>().Named("createbook");
+            this.Bind<ICommand>().To<CreatePdfCommand>().InSingletonScope().Named("createpdf");
+
+            //READ COMMANDS
             this.Bind<ICommand>().To<FindBookCommand>().InSingletonScope().Named("findbook");
-            this.Bind<ICommand>().To<PdfReporter>().InSingletonScope().Named("createpdf"); 
-            //TODO
-            //Command bindings
-            this.Bind<ICommand>().To<CreateBookCommand>().Named("addbook");
-            this.Bind<ICommand>().To<DeleteBookCommand>().Named("deletebook");
+
+            //UPDATE COMMANDS
             this.Bind<ICommand>().To<UpdateBookTitle>().Named("updatebooktitle");
             this.Bind<ICommand>().To<UpdateBookDescription>().Named("updatebookdescription");
             this.Bind<ICommand>().To<UpdateBookRating>().Named("updatebookrating");
             this.Bind<ICommand>().To<UpdateBookPrice>().Named("updatebookprice");
+
+            //DELETE COMMANDS
+            this.Bind<ICommand>().To<DeleteBookCommand>().Named("deletebook");
+            
         }
     }
 }
