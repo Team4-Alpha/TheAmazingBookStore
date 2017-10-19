@@ -13,6 +13,7 @@ using TheAmazingBookStore.Data.Abstractions;
 using TheAmazingBookStore.Controller.Commands.Updating.BookUpdateCommands;
 using TheAmazingBookStore.Controller.Commands.Updating.CountryUpdateCommands;
 using TheAmazingBookStore.Controller.Commands.Updating.GenreUpdateCommands;
+using TheAmazingBookStore.Controller.Commands.Updating.AuthorUpdateCommands;
 
 namespace TheAmazingBookStore.Controller.Ninject
 {
@@ -34,6 +35,8 @@ namespace TheAmazingBookStore.Controller.Ninject
             this.Bind<ICommand>().To<CreateCountryCommand>().Named("createcountry");
             this.Bind<ICommand>().To<CreateGenreCommand>().Named("creategenre");
             this.Bind<ICommand>().To<CreatePdfCommand>().InSingletonScope().Named("createpdf");
+            
+            this.Bind<ICommand>().To<CreateAuthorCommand>().Named("createauthor");
 
             //READ COMMANDS
             this.Bind<ICommand>().To<FindBookCommand>().InSingletonScope().Named("findbook");
@@ -46,9 +49,16 @@ namespace TheAmazingBookStore.Controller.Ninject
             this.Bind<ICommand>().To<UpdateCountryName>().Named("updatecountryname");
             this.Bind<ICommand>().To<UpdateGenreDescription>().Named("updategenredescription");
             this.Bind<ICommand>().To<UpdateGenreName>().Named("updategenrename");
-
+            
+            this.Bind<ICommand>().To<UpdateAuthorFirstName>().Named("updateauthorfirstname");
+            this.Bind<ICommand>().To<UpdateAuthorLastName>().Named("updateauthorlastname");
+            this.Bind<ICommand>().To<UpdateAuthorCountry>().Named("updateauthorcountry");
+            this.Bind<ICommand>().To<UpdateAuthorBook>().Named("updateauthorbook");
+           
             //DELETE COMMANDS
-            this.Bind<ICommand>().To<DeleteBookCommand>().Named("deletebook");          
+            this.Bind<ICommand>().To<DeleteBookCommand>().Named("deletebook");
+            this.Bind<ICommand>().To<DeleteAuthorCommand>().Named("deleteauthor");
+
         }
     }
 }
