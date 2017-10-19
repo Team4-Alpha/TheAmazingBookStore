@@ -87,9 +87,15 @@
   <ItemGroup>
     <Compile Include="Commands\Contracts\ICommand.cs" />
     <Compile Include="Commands\Contracts\IPdfReporter.cs" />
+    <Compile Include="Commands\Creating\CreateAuthorCommand.cs" />
     <Compile Include="Commands\Creating\CreateBookCommand.cs" />
+    <Compile Include="Commands\Deleting\DeleteAuthorCommand.cs" />
     <Compile Include="Commands\Deleting\DeleteBookCommand.cs" />
     <Compile Include="Commands\Finding\FindBookCommand.cs" />
+    <Compile Include="Commands\Updating\AuthorUpdateCommands\UpdateAuthorBook.cs" />
+    <Compile Include="Commands\Updating\AuthorUpdateCommands\UpdateAuthorCountry.cs" />
+    <Compile Include="Commands\Updating\AuthorUpdateCommands\UpdateAuthorFirstName.cs" />
+    <Compile Include="Commands\Updating\AuthorUpdateCommands\UpdateAuthorLastName.cs" />
     <Compile Include="Commands\Updating\BookUpdateCommands\UpdateBookDescription.cs" />
     <Compile Include="Commands\Updating\BookUpdateCommands\UpdateBookPrice.cs" />
     <Compile Include="Commands\Updating\BookUpdateCommands\UpdateBookRating.cs" />
