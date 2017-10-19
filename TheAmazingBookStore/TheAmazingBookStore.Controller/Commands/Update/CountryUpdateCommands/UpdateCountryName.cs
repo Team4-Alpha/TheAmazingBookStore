@@ -24,9 +24,9 @@ namespace TheAmazingBookStore.Controller.Commands.Update.CountryUpdateCommands
         {
             int countryId = int.Parse(parameters[0]);
             string newName = parameters[1];
-            this.context.Countries.Where(c => c.Id == countryId).ToList()[0].Title = newTitle;
+            this.context.Countries.First(c => c.Id == countryId).Name = newName;
             this.context.SaveChanges();
-            return $"Book's title has been changed to \"{this.context.Books.Where(b => b.Id == bookId).ToList()[0].Title}\".";
+            return $"Country's name has been changed to \"{this.context.Countries.First(c => c.Id == countryId).Name}\".";
         }
     }
 }

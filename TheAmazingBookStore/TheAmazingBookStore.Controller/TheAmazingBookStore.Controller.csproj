@@ -86,14 +86,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands\Contracts\ICommand.cs" />
+    <Compile Include="Commands\Contracts\IPdfReporter.cs" />
     <Compile Include="Commands\Creating\CreateBookCommand.cs" />
     <Compile Include="Commands\Deleting\DeleteBookCommand.cs" />
+    <Compile Include="Commands\Find\FindBookCommand.cs" />
     <Compile Include="Commands\Update\BookUpdateCommands\UpdateBookDescription.cs" />
     <Compile Include="Commands\Update\BookUpdateCommands\UpdateBookPrice.cs" />
     <Compile Include="Commands\Update\BookUpdateCommands\UpdateBookRating.cs" />
     <Compile Include="Commands\Update\BookUpdateCommands\UpdateBookTitle.cs" />
     <Compile Include="Commands\Update\CountryUpdateCommands\UpdateCountryName.cs" />
-    <Compile Include="Commands\FindCommand\FindBookCommand.cs" />
     <Compile Include="Commands\PdfReporter.cs" />
     <Compile Include="Core\Contracts\IEngine.cs" />
     <Compile Include="Core\Contracts\IParser.cs" />

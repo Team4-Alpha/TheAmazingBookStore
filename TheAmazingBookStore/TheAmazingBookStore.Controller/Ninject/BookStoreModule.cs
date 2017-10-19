@@ -1,13 +1,10 @@
 ﻿using Ninject.Modules;
 using TheAmazingBookStore.Controller.Commands;
 using TheAmazingBookStore.Controller.Commands.Contracts;
-<<<<<<< HEAD
 using TheAmazingBookStore.Controller.Commands.Creating;
 using TheAmazingBookStore.Controller.Commands.Deleting;
 using TheAmazingBookStore.Controller.Commands.Update.BookUpdateCommands;
-=======
 using TheAmazingBookStore.Controller.Commands.FindCommand;
->>>>>>> 7ea44eff7c86d7cfa773ef5da9615b44156490bb
 using TheAmazingBookStore.Controller.Core;
 using TheAmazingBookStore.Controller.Core.Contracts;
 using TheAmazingBookStore.Controller.Core.Factories;

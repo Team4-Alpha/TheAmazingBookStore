@@ -8,7 +8,6 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Input;
 using TheAmazingBookStore.Controller.Commands.Contracts;
 using TheAmazingBookStore.Controller.Commands.FindCommand;
 using TheAmazingBookStore.Data;
@@ -17,7 +16,7 @@ using TheAmazingBookStore.Models;
 
 namespace TheAmazingBookStore.Controller.Commands
 {
-    public class PdfReporter :FindBookCommand,  IPdfReporter, Contracts.ICommand
+    public class PdfReporter : FindBookCommand,  IPdfReporter, ICommand
     {
         private readonly IBookStoreContext context;
         public PdfReporter(BookStoreContext context)

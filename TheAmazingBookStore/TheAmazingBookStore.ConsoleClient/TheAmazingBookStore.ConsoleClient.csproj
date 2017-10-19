@@ -96,6 +96,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TheAmazingBookStore.Controller\TheAmazingBookStore.Controller.csproj">
+      <Project>{72fd4e59-ddd7-4d0c-bea9-f39f0aac7022}</Project>
+      <Name>TheAmazingBookStore.Controller</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TheAmazingBookStore.Data\TheAmazingBookStore.Data.csproj">
       <Project>{3ecbf42c-17cf-473f-b9c3-b2fd8c1bdf3c}</Project>
       <Name>TheAmazingBookStore.Data</Name>
