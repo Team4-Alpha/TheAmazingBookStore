@@ -24,9 +24,9 @@ namespace TheAmazingBookStore.Controller.Commands.Updating.AuthorUpdateCommands
         {
             int authorID = int.Parse(parameters[0]);
             string lastName = parameters[1];
-            this.context.Authors.Where(b => b.Id == authorID).ToList()[0].LastName = lastName;
+            this.context.Authors.Find(authorID).LastName = lastName;
             this.context.SaveChanges();
-            return $"Authors Last Name has been changed to \"{this.context.Authors.Where(b => b.Id == authorID).ToList()[0].LastName}\".";
+            return $"Authors Last Name has been changed to \"{this.context.Authors.Find(authorID).LastName}\".";
         }
     }
 }

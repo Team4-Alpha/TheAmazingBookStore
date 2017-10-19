@@ -53,7 +53,7 @@ namespace TheAmazingBookStore.Controller.Ninject
             this.Bind<ICommand>().To<UpdateAuthorFirstName>().Named("updateauthorfirstname");
             this.Bind<ICommand>().To<UpdateAuthorLastName>().Named("updateauthorlastname");
             this.Bind<ICommand>().To<UpdateAuthorCountry>().Named("updateauthorcountry");
-            this.Bind<ICommand>().To<UpdateAuthorBook>().Named("updateauthorbook");
+            this.Bind<ICommand>().To<UpdateAuthorBooks>().Named("updateauthorbook");
            
             //DELETE COMMANDS
             this.Bind<ICommand>().To<DeleteBookCommand>().Named("deletebook");

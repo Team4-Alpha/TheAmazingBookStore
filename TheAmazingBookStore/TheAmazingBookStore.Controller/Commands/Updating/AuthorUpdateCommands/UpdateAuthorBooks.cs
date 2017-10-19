@@ -10,11 +10,11 @@ using TheAmazingBookStore.Models;
 
 namespace TheAmazingBookStore.Controller.Commands.Updating.AuthorUpdateCommands
 {
-   public class UpdateAuthorBook:ICommand
+   public class UpdateAuthorBooks:ICommand
     {
         private readonly IBookStoreContext context;
 
-        public UpdateAuthorBook(IBookStoreContext context)
+        public UpdateAuthorBooks(IBookStoreContext context)
         {
             Guard.WhenArgument(context, "context").IsNull().Throw();
 
@@ -23,17 +23,16 @@ namespace TheAmazingBookStore.Controller.Commands.Updating.AuthorUpdateCommands
         //TODO update author book not working
         public string Execute(IList<string> parameters)
         {
-            int authorID = int.Parse(parameters[0]);
-            var book = (parameters[1]);
+            int authorId = int.Parse(parameters[0]);
+            var bookString = (parameters[1]);
+            
+            var book = this.context.Books.First(b => b.Title == bookString);
 
-            //var obj= this.context.Authors.First(b => b.Id == authorID).Books;
-            List<Book> books = this.context.Books.Where(b => b.Title == book).ToList();
-
-
-            this.context.Authors.Where(b => b.Id == authorID).ToList()[0].Books = books;
+            var author = this.context.Authors.Find(authorId);
+            author.Books.Add(book);
 
             this.context.SaveChanges();
-            return $"Authors book has been added to \"{this.context.Authors.First(b => b.Id == authorID).Books}\".";
+            return $"{book.Title} has been added to {author.FirstName} {author.LastName}.";
         }
     }
 }

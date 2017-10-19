@@ -26,10 +26,10 @@ namespace TheAmazingBookStore.Controller.Commands.Updating.AuthorUpdateCommands
             int authorID = int.Parse(parameters[0]);
             string country = (parameters[1]);
             Country countryObject = this.context.Countries.First(c => c.Name == country);
-            //this.context.Authors.First(b => b.Id == authorID).Country.Id = countryObject.Id;
-            this.context.Authors.First(b => b.Id == authorID).Country = countryObject;
+            this.context.Authors.Find(authorID).Country = countryObject;
             this.context.SaveChanges();
-            return $"Authors country has been changed to \"{this.context.Authors.First(b => b.Id == authorID).Country.Name}\".";
+
+            return $"Authors country has been changed to \"{this.context.Authors.Find(authorID).Country.Name}\".";
         }
     }
 }
