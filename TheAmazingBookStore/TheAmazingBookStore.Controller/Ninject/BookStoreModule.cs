@@ -11,6 +11,7 @@ using TheAmazingBookStore.Controller.Core.Factories;
 using TheAmazingBookStore.Controller.Core.Providers;
 using TheAmazingBookStore.Data;
 using TheAmazingBookStore.Data.Abstractions;
+using TheAmazingBookStore.Controller.Commands.Seeding;
 
 namespace TheAmazingBookStore.Controller.Ninject
 {
@@ -42,6 +43,8 @@ namespace TheAmazingBookStore.Controller.Ninject
 
             //DELETE COMMANDS
             this.Bind<ICommand>().To<DeleteBookCommand>().Named("deletebook");
+
+            this.Bind<ICommand>().To<SeedJsonCommand>().Named("seedjson");
             
         }
     }
