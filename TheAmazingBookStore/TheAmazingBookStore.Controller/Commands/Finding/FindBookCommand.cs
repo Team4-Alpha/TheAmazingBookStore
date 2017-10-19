@@ -12,11 +12,11 @@ using TheAmazingBookStore.Models;
 
 namespace TheAmazingBookStore.Controller.Commands.FindCommand
 {
-   public class FindBookCommand : ICommand
+    public class FindBookCommand : ICommand
     {
         private readonly IBookStoreContext context;
 
-        public FindBookCommand(BookStoreContext context)
+        public FindBookCommand(IBookStoreContext context)
         {
             Guard.WhenArgument(context, "context").IsNull().Throw();
             this.context = context;
@@ -24,49 +24,44 @@ namespace TheAmazingBookStore.Controller.Commands.FindCommand
 
         public virtual string Execute(IList<string> parameters)
         {
-            string find="";
+            int id = int.Parse(parameters[0]);
             string title;
-            string author = "";
+            string authors = "";
             string description;
             string genres = "";
-            try
+            double rating;
+            decimal price;
+            string sellers = "";
+
+            Book book = this.context.Books.Find(id);
+
+            title = book.Title;
+            foreach (var item in book.Genres)
             {
-                for (int i = 0; i < parameters.Count; i++)
-                {
-                    find += (parameters[i]+" ");
-                }
-                
-               
-            }
-            catch
-            {
-                throw new ArgumentException("Failed parse");
+                genres += (item.Name + "\n");
             }
 
-            List<Book> books= this.context.Books.Where(x=>x.Title==find).ToList();
-            if (books.Count!=0)
+            foreach (var item in book.Authors)
             {
-                Book book = books[0];
-                 title = book.Title;
-                foreach (var item in book.Genres)
-                {
-                    genres += (item.Name +Environment.NewLine);
-                }
-
-                foreach (var item in book.Authors)
-                {
-                   author+=item.FirstName +" " +item.LastName;
-                }
-                 description = book.Description;
+                authors += item.FirstName + " " + item.LastName + "\n";
             }
-            else
+            description = book.Description;
+            rating = book.Rating;
+            price = book.Price;
+
+            foreach (var item in book.Sellers)
             {
-                throw new ArgumentException("Book not found");
+                sellers += item.FirstName + " " + item.LastName + "\n";
             }
-            
 
-            var result= ($"Title = {title}"+ Environment.NewLine+ $"Genres = {genres}" + $"Author = {author}" + Environment.NewLine +
-               $"Description ={description}") ;
+
+            var result = $@"Title: {title}
+Genres: {genres}
+Author: {authors}
+Description: {description}
+Rating: {rating}
+Price: {price}
+Sellers: {sellers}";
             return result;
         }
     }

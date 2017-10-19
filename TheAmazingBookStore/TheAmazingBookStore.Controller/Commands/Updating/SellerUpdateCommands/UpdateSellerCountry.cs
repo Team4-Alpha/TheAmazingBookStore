@@ -8,13 +8,13 @@ using TheAmazingBookStore.Controller.Commands.Contracts;
 using TheAmazingBookStore.Data.Abstractions;
 using TheAmazingBookStore.Models;
 
-namespace TheAmazingBookStore.Controller.Commands.Deleting
+namespace TheAmazingBookStore.Controller.Commands.Updating.SellerUpdateCommands
 {
-    public class DeleteAuthorCommand:ICommand
+    public class UpdateSellerCountry : ICommand
     {
         private readonly IBookStoreContext context;
 
-        public DeleteAuthorCommand(IBookStoreContext context)
+        public UpdateSellerCountry(IBookStoreContext context)
         {
             Guard.WhenArgument(context, "context").IsNull().Throw();
 
@@ -23,11 +23,13 @@ namespace TheAmazingBookStore.Controller.Commands.Deleting
 
         public string Execute(IList<string> parameters)
         {
-            int id = int.Parse(parameters[0]);
-            Author author = this.context.Authors.Find(id);
-            this.context.Authors.Remove(author);
+            int sellerId = int.Parse(parameters[0]);
+            string country = (parameters[1]);
+            Country countryObject = this.context.Countries.First(c => c.Name == country);
+            this.context.Sellers.Find(sellerId).Country = countryObject;
             this.context.SaveChanges();
-            return $"Author with id {id} deleted";
+
+            return $"Seller's country has been changed to \"{this.context.Sellers.Find(sellerId).Country.Name}\".";
         }
     }
 }

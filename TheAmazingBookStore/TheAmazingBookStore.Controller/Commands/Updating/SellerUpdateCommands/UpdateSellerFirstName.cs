@@ -6,15 +6,14 @@ using System.Text;
 using System.Threading.Tasks;
 using TheAmazingBookStore.Controller.Commands.Contracts;
 using TheAmazingBookStore.Data.Abstractions;
-using TheAmazingBookStore.Models;
 
-namespace TheAmazingBookStore.Controller.Commands.Deleting
+namespace TheAmazingBookStore.Controller.Commands.Updating.SellerUpdateCommands
 {
-    public class DeleteAuthorCommand:ICommand
+    public class UpdateSellerFirstName : ICommand
     {
         private readonly IBookStoreContext context;
 
-        public DeleteAuthorCommand(IBookStoreContext context)
+        public UpdateSellerFirstName(IBookStoreContext context)
         {
             Guard.WhenArgument(context, "context").IsNull().Throw();
 
@@ -23,11 +22,12 @@ namespace TheAmazingBookStore.Controller.Commands.Deleting
 
         public string Execute(IList<string> parameters)
         {
-            int id = int.Parse(parameters[0]);
-            Author author = this.context.Authors.Find(id);
-            this.context.Authors.Remove(author);
+            int sellerId = int.Parse(parameters[0]);
+            string firstName = parameters[1];
+            this.context.Sellers.Find(sellerId).FirstName = firstName;
             this.context.SaveChanges();
-            return $"Author with id {id} deleted";
+
+            return $"Seller's First Name has been changed to \"{this.context.Sellers.Find(sellerId).FirstName}\".";
         }
     }
 }

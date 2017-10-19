@@ -16,25 +16,29 @@ using TheAmazingBookStore.Models;
 
 namespace TheAmazingBookStore.Controller.Commands
 {
-    public class CreatePdfCommand : FindBookCommand,  IPdfReporter, ICommand
+    public class CreatePdfCommand :  IPdfReporter, ICommand
     {
         private readonly IBookStoreContext context;
         public CreatePdfCommand(BookStoreContext context)
-            :base(context)
         {
             Guard.WhenArgument(context, "context").IsNull().Throw();
             this.context = context;
 
         }
-        public override string Execute(IList<string> parameters)
+        public string Execute(IList<string> parameters)
         {
-           
-            var res = base.Execute(parameters);
-            FileStream fs = new FileStream("Book.pdf", FileMode.Create, FileAccess.Write, FileShare.None);
+            var books = this.context.Books;
+            var findBook = new FindBookCommand(this.context);
+            StringBuilder sb = new StringBuilder();
+            foreach (var book in books)
+            {
+                sb.AppendLine(findBook.Execute(new List<string> { $"{book.Id}" }));
+            }
+            FileStream fs = new FileStream("Books.pdf", FileMode.Create, FileAccess.Write, FileShare.None);
             Document doc = new Document();
             PdfWriter writer = PdfWriter.GetInstance(doc, fs);
             doc.Open();
-            doc.Add(new Paragraph(res));
+            doc.Add(new Paragraph(fs.ToString()));
             doc.Close();
 
             return "PDF document is ready.";

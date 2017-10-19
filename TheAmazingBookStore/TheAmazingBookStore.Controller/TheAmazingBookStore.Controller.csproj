@@ -94,8 +94,12 @@
     <Compile Include="Commands\Creating\CreateBookCommand.cs" />
     <Compile Include="Commands\Creating\CreateCountryCommand.cs" />
     <Compile Include="Commands\Creating\CreateGenreCommand.cs" />
+    <Compile Include="Commands\Creating\CreateSellerCommand.cs" />
     <Compile Include="Commands\Deleting\DeleteAuthorCommand.cs" />
     <Compile Include="Commands\Deleting\DeleteBookCommand.cs" />
+    <Compile Include="Commands\Deleting\DeleteCountryCommand.cs" />
+    <Compile Include="Commands\Deleting\DeleteGenreCommand.cs" />
+    <Compile Include="Commands\Deleting\DeleteSellerCommand.cs" />
     <Compile Include="Commands\Finding\FindBookCommand.cs" />
     <Compile Include="Commands\Updating\AuthorUpdateCommands\UpdateAuthorBooks.cs" />
     <Compile Include="Commands\Updating\AuthorUpdateCommands\UpdateAuthorCountry.cs" />
@@ -110,6 +114,10 @@
     <Compile Include="Commands\Creating\CreatePdfCommand.cs" />
     <Compile Include="Commands\Updating\GenreUpdateCommands\UpdateGenreDescription.cs" />
     <Compile Include="Commands\Updating\GenreUpdateCommands\UpdateGenreName.cs" />
+    <Compile Include="Commands\Updating\SellerUpdateCommands\UpdateSellerBooks.cs" />
+    <Compile Include="Commands\Updating\SellerUpdateCommands\UpdateSellerCountry.cs" />
+    <Compile Include="Commands\Updating\SellerUpdateCommands\UpdateSellerFirstName.cs" />
+    <Compile Include="Commands\Updating\SellerUpdateCommands\UpdateSellerLastName.cs" />
     <Compile Include="Core\Contracts\IEngine.cs" />
     <Compile Include="Core\Contracts\IParser.cs" />
     <Compile Include="Core\Contracts\IProcessor.cs" />
