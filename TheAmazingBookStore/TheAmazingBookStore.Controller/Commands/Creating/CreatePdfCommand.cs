@@ -16,10 +16,10 @@ using TheAmazingBookStore.Models;
 
 namespace TheAmazingBookStore.Controller.Commands
 {
-    public class PdfReporter : FindBookCommand,  IPdfReporter, ICommand
+    public class CreatePdfCommand : FindBookCommand,  IPdfReporter, ICommand
     {
         private readonly IBookStoreContext context;
-        public PdfReporter(BookStoreContext context)
+        public CreatePdfCommand(BookStoreContext context)
             :base(context)
         {
             Guard.WhenArgument(context, "context").IsNull().Throw();
