@@ -50,5 +50,31 @@ namespace TheAmazingBookStore.Controller.Tests.Core.EngineTests
             Assert.ThrowsException<ArgumentNullException>(() =>
             new Engine(readerMock.Object, null, parserMock.Object, processorMock.Object));
         }
+
+        [TestMethod]
+        public void ThrowException_WhenParserArgumentIsNull()
+        {
+            // Arrange
+            var readerMock = new Mock<IReader>();
+            var writerMock = new Mock<IWriter>();
+            var processorMock = new Mock<IProcessor>();
+
+            // Act & Assert
+            Assert.ThrowsException<ArgumentNullException>(() =>
+            new Engine(readerMock.Object, writerMock.Object, null, processorMock.Object));
+        }
+
+        [TestMethod]
+        public void ThrowException_WhenProcessorArgumentIsNull()
+        {
+            // Arrange
+            var readerMock = new Mock<IReader>();
+            var writerMock = new Mock<IWriter>();
+            var parserMock = new Mock<IParser>();
+
+            // Act & Assert
+            Assert.ThrowsException<ArgumentNullException>(() =>
+            new Engine(readerMock.Object, writerMock.Object, parserMock.Object, null));
+        }
     }
 }
