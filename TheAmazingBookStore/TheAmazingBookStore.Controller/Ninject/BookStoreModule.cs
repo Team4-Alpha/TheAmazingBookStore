@@ -22,8 +22,7 @@ namespace TheAmazingBookStore.Controller.Ninject
 
             this.Bind<IProcessor>().To<CommandProcessor>();
             this.Bind<IParser>().To<CommandParser>();
-
-            this.Bind<IBookStoreFactory>().To<BookStoreFactory>().InSingletonScope();
+            
             this.Bind<ICommandFactory>().To<CommandFactory>().InSingletonScope();
 
             this.Bind<IEngine>().To<Engine>().InSingletonScope();
