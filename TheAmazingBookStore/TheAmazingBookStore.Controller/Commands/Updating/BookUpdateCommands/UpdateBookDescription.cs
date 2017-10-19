@@ -1,9 +1,6 @@
 ﻿using Bytes2you.Validation;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TheAmazingBookStore.Controller.Commands.Contracts;
 using TheAmazingBookStore.Data.Abstractions;
 
@@ -29,9 +26,9 @@ namespace TheAmazingBookStore.Controller.Commands.Updating.BookUpdateCommands
                 newDescription += parameters[i] + " ";
             }
             newDescription = newDescription.TrimEnd(' ');
-            this.context.Books.Where(b => b.Id == bookId).ToList()[0].Description = newDescription;
+            this.context.Books.Find(bookId).Description = newDescription;
             this.context.SaveChanges();
-            return $"The book's description has been changed to \"{this.context.Books.Where(b => b.Id == bookId).ToList()[0].Description}\".";
+            return $"The book's description has been changed to \"{this.context.Books.Find(bookId).Description}\".";
         }
     }
 }

@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace TheAmazingBookStore.Models
+﻿namespace TheAmazingBookStore.Models
 {
     public class Country
     {

@@ -1,12 +1,10 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using System;
 using System.Data.Entity;
-using TheAmazingBookStore.Models;
-using TheAmazingBookStore.Data;
 using TheAmazingBookStore.Controller.Commands.Creating;
 using TheAmazingBookStore.Data.Abstractions;
-using System.Collections.Generic;
+using TheAmazingBookStore.Models;
 
 namespace TheAmazingBookStore.Controller.Tests.Commands.Creating.CreateBookCommandTests
 {
