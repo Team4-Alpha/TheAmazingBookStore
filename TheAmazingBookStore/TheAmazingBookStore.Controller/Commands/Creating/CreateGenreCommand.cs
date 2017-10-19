@@ -6,14 +6,15 @@ using System.Text;
 using System.Threading.Tasks;
 using TheAmazingBookStore.Controller.Commands.Contracts;
 using TheAmazingBookStore.Data.Abstractions;
+using TheAmazingBookStore.Models;
 
-namespace TheAmazingBookStore.Controller.Commands.Update.BookUpdateCommands
+namespace TheAmazingBookStore.Controller.Commands.Creating
 {
-    public class UpdateBookPrice : ICommand
+    public class CreateGenreCommand : ICommand
     {
         private readonly IBookStoreContext context;
 
-        public UpdateBookPrice(IBookStoreContext context)
+        public CreateGenreCommand(IBookStoreContext context)
         {
             Guard.WhenArgument(context, "context").IsNull().Throw();
 
@@ -22,11 +23,11 @@ namespace TheAmazingBookStore.Controller.Commands.Update.BookUpdateCommands
 
         public string Execute(IList<string> parameters)
         {
-            int bookId = int.Parse(parameters[0]);
-            decimal newPrice = decimal.Parse(parameters[1]);
-            this.context.Books.Where(b => b.Id == bookId).ToList()[0].Price = newPrice;
+            Genre genre = new Genre();
+            this.context.Genres.Add(genre);
             this.context.SaveChanges();
-            return $"The book's price has been changed to \"{this.context.Books.Where(b => b.Id == bookId).ToList()[0].Price}\".";
+
+            return $"Genre with Id {this.context.Genres.ToList().Last().Id} was created.";
         }
     }
 }

@@ -6,14 +6,15 @@ using System.Text;
 using System.Threading.Tasks;
 using TheAmazingBookStore.Controller.Commands.Contracts;
 using TheAmazingBookStore.Data.Abstractions;
+using TheAmazingBookStore.Models;
 
-namespace TheAmazingBookStore.Controller.Commands.Update.BookUpdateCommands
+namespace TheAmazingBookStore.Controller.Commands.Creating
 {
-    public class UpdateBookPrice : ICommand
+    public class CreateCountryCommand : ICommand
     {
         private readonly IBookStoreContext context;
 
-        public UpdateBookPrice(IBookStoreContext context)
+        public CreateCountryCommand(IBookStoreContext context)
         {
             Guard.WhenArgument(context, "context").IsNull().Throw();
 
@@ -22,11 +23,11 @@ namespace TheAmazingBookStore.Controller.Commands.Update.BookUpdateCommands
 
         public string Execute(IList<string> parameters)
         {
-            int bookId = int.Parse(parameters[0]);
-            decimal newPrice = decimal.Parse(parameters[1]);
-            this.context.Books.Where(b => b.Id == bookId).ToList()[0].Price = newPrice;
+            Country country = new Country();
+            this.context.Countries.Add(country);
             this.context.SaveChanges();
-            return $"The book's price has been changed to \"{this.context.Books.Where(b => b.Id == bookId).ToList()[0].Price}\".";
+
+            return $"Country with Id {this.context.Countries.ToList().Last().Id} was created.";
         }
     }
 }

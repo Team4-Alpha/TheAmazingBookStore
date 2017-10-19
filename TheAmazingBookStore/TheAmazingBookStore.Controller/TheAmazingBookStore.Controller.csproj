@@ -83,6 +83,8 @@
   <ItemGroup>
     <Compile Include="Commands\Contracts\ICommand.cs" />
     <Compile Include="Commands\Creating\CreateBookCommand.cs" />
+    <Compile Include="Commands\Creating\CreateCountryCommand.cs" />
+    <Compile Include="Commands\Creating\CreateGenreCommand.cs" />
     <Compile Include="Commands\Deleting\DeleteBookCommand.cs" />
     <Compile Include="Commands\Update\BookUpdateCommands\UpdateBookDescription.cs" />
     <Compile Include="Commands\Update\BookUpdateCommands\UpdateBookPrice.cs" />
@@ -90,6 +92,8 @@
     <Compile Include="Commands\Update\BookUpdateCommands\UpdateBookTitle.cs" />
     <Compile Include="Commands\Update\CountryUpdateCommands\UpdateCountryName.cs" />
     <Compile Include="Commands\Find\FindBookCommand.cs" />
+    <Compile Include="Commands\Update\GenreUpdateCommands\UpdateGenreDescription.cs" />
+    <Compile Include="Commands\Update\GenreUpdateCommands\UpdateGenreName.cs" />
     <Compile Include="Core\Contracts\IEngine.cs" />
     <Compile Include="Core\Contracts\IParser.cs" />
     <Compile Include="Core\Contracts\IProcessor.cs" />

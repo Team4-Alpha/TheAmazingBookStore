@@ -26,7 +26,7 @@ namespace TheAmazingBookStore.Controller.Commands.Update.BookUpdateCommands
             double newRating = double.Parse(parameters[1]);
             this.context.Books.Where(b => b.Id == bookId).ToList()[0].Rating = newRating;
             this.context.SaveChanges();
-            return $"Book's rating has been changed to \"{this.context.Books.Where(b => b.Id == bookId).ToList()[0].Rating}\".";
+            return $"The book's rating has been changed to \"{this.context.Books.Where(b => b.Id == bookId).ToList()[0].Rating}\".";
         }
     }
 }

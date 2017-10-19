@@ -1,12 +1,11 @@
 ﻿using Ninject.Modules;
 using TheAmazingBookStore.Controller.Commands.Contracts;
-<<<<<<< HEAD
 using TheAmazingBookStore.Controller.Commands.Creating;
 using TheAmazingBookStore.Controller.Commands.Deleting;
-using TheAmazingBookStore.Controller.Commands.Update.BookUpdateCommands;
-=======
 using TheAmazingBookStore.Controller.Commands.FindCommand;
->>>>>>> 7ea44eff7c86d7cfa773ef5da9615b44156490bb
+using TheAmazingBookStore.Controller.Commands.Update.BookUpdateCommands;
+using TheAmazingBookStore.Controller.Commands.Update.CountryUpdateCommands;
+using TheAmazingBookStore.Controller.Commands.Update.GenreUpdateCommands;
 using TheAmazingBookStore.Controller.Core;
 using TheAmazingBookStore.Controller.Core.Contracts;
 using TheAmazingBookStore.Controller.Core.Factories;
@@ -38,6 +37,9 @@ namespace TheAmazingBookStore.Controller.Ninject
             this.Bind<ICommand>().To<UpdateBookDescription>().Named("updatebookdescription");
             this.Bind<ICommand>().To<UpdateBookRating>().Named("updatebookrating");
             this.Bind<ICommand>().To<UpdateBookPrice>().Named("updatebookprice");
+            this.Bind<ICommand>().To<UpdateCountryName>().Named("updatecountryname");
+            this.Bind<ICommand>().To<UpdateGenreDescription>().Named("updategenredescription");
+            this.Bind<ICommand>().To<UpdateGenreName>().Named("updategenrename");
         }
     }
 }

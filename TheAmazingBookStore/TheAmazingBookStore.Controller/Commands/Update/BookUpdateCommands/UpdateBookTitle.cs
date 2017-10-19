@@ -23,10 +23,15 @@ namespace TheAmazingBookStore.Controller.Commands.Update.BookUpdateCommands
         public string Execute(IList<string> parameters)
         {
             int bookId = int.Parse(parameters[0]);
-            string newTitle = parameters[1];
+            string newTitle = string.Empty;
+            for (int i = 1; i < parameters.Count(); i++)
+            {
+                newTitle += parameters[i] + " ";
+            }
+            newTitle = newTitle.TrimEnd(' ');
             this.context.Books.Where(b => b.Id == bookId).ToList()[0].Title = newTitle;
             this.context.SaveChanges();
-            return $"Book's title has been changed to \"{this.context.Books.Where(b => b.Id == bookId).ToList()[0].Title}\".";
+            return $"The book's title has been changed to \"{this.context.Books.Where(b => b.Id == bookId).ToList()[0].Title}\".";
         }
     }
 }
