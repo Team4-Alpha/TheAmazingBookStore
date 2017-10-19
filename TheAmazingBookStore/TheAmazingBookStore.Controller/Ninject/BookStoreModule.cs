@@ -13,6 +13,7 @@ using TheAmazingBookStore.Data.Abstractions;
 using TheAmazingBookStore.Controller.Commands.Updating.BookUpdateCommands;
 using TheAmazingBookStore.Controller.Commands.Updating.CountryUpdateCommands;
 using TheAmazingBookStore.Controller.Commands.Updating.GenreUpdateCommands;
+using TheAmazingBookStore.Controller.Commands.Updating.AuthorUpdateCommands;
 
 namespace TheAmazingBookStore.Controller.Ninject
 {
