@@ -84,5 +84,6 @@ namespace TheAmazingBookStore.Controller.Ninject
             this.Bind<ICommand>().To<CreatePdfSellerCommand>().Named("createpdfseller");
         }
     }
-}
-
+}
+
+
