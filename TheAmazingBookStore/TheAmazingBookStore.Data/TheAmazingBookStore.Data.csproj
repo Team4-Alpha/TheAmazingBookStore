@@ -88,6 +88,10 @@
     <Compile Include="Migrations\201710171938452_Author-Seller-Fix.Designer.cs">
       <DependentUpon>201710171938452_Author-Seller-Fix.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710192200154_CountryId-Nullable.cs" />
+    <Compile Include="Migrations\201710192200154_CountryId-Nullable.Designer.cs">
+      <DependentUpon>201710192200154_CountryId-Nullable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -107,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710171938452_Author-Seller-Fix.resx">
       <DependentUpon>201710171938452_Author-Seller-Fix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710192200154_CountryId-Nullable.resx">
+      <DependentUpon>201710192200154_CountryId-Nullable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,12 +1,8 @@
 ﻿using Bytes2you.Validation;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TheAmazingBookStore.Controller.Commands.Contracts;
 using TheAmazingBookStore.Data.Abstractions;
-using TheAmazingBookStore.Models;
 
 namespace TheAmazingBookStore.Controller.Commands.Deleting
 {
@@ -23,10 +19,10 @@ namespace TheAmazingBookStore.Controller.Commands.Deleting
 
         public string Execute(IList<string> parameters)
         {
-            string title = parameters[0];
-            this.context.Books.Remove(this.context.Books.Where(b => b.Title == title).ToList()[0]);
+            int id = int.Parse(parameters[0]);
+            this.context.Books.Remove(this.context.Books.Find(id));
             this.context.SaveChanges();
-            return "deleted";
+            return $"Book with id {id} deleted";
         }
     }
 }

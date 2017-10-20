@@ -1,17 +1,20 @@
 ﻿using Bytes2you.Validation;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using TheAmazingBookStore.Controller.Commands.Contracts;
 using TheAmazingBookStore.Data.Abstractions;
 using TheAmazingBookStore.Models;
 
-namespace TheAmazingBookStore.Controller.Commands.Updating.AuthorUpdateCommands
+namespace TheAmazingBookStore.Controller.Commands.Updating.SellerUpdateCommands
 {
-    public class UpdateAuthorCountry : ICommand
+    public class UpdateSellerCountry : ICommand
     {
         private readonly IBookStoreContext context;
 
-        public UpdateAuthorCountry(IBookStoreContext context)
+        public UpdateSellerCountry(IBookStoreContext context)
         {
             Guard.WhenArgument(context, "context").IsNull().Throw();
 
@@ -20,13 +23,13 @@ namespace TheAmazingBookStore.Controller.Commands.Updating.AuthorUpdateCommands
 
         public string Execute(IList<string> parameters)
         {
-            int authorID = int.Parse(parameters[0]);
+            int sellerId = int.Parse(parameters[0]);
             string country = (parameters[1]);
             Country countryObject = this.context.Countries.First(c => c.Name == country);
-            this.context.Authors.Find(authorID).Country = countryObject;
+            this.context.Sellers.Find(sellerId).Country = countryObject;
             this.context.SaveChanges();
 
-            return $"Authors country has been changed to \"{this.context.Authors.Find(authorID).Country.Name}\".";
+            return $"Seller's country has been changed to \"{this.context.Sellers.Find(sellerId).Country.Name}\".";
         }
     }
 }

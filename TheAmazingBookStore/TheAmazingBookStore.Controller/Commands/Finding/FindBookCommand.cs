@@ -1,73 +1,64 @@
-﻿using Bytes2you.Validation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Remoting.Contexts;
-using System.Text;
-using System.Threading.Tasks;
-using TheAmazingBookStore.Controller.Commands.Contracts;
-using TheAmazingBookStore.Data;
-using TheAmazingBookStore.Data.Abstractions;
-using TheAmazingBookStore.Models;
 
-namespace TheAmazingBookStore.Controller.Commands.FindCommand
+            Book book = this.context.Books.Find(id);
+
+            title = book.Title;
+            foreach (var item in book.Genres)
+            {
+                genres += (item.Name + "\n");
+            }
+
+            foreach (var item in book.Authors)
+            {
+                authors += item.FirstName + " " + item.LastName + "\n";
+            }
+            description = book.Description;
+            rating = book.Rating;
+            price = book.Price;
+
+            foreach (var item in book.Sellers)
+            {
+                sellers += item.FirstName + " " + item.LastName + "\n";
+            }
+
+
+            var result = $@"Title: {title}
+Genres: {genres}
+Author: {authors}
+Description: {description}
+Rating: {rating}
+Price: {price}
+Sellers: {sellers}";
 {
-   public class FindBookCommand : ICommand
-    {
-        private readonly IBookStoreContext context;
+    public class FindBookCommand : ICommand
+            double rating;
+            decimal price;
+            string sellers = "";
+            Book book = this.context.Books.Find(id);
 
-        public FindBookCommand(BookStoreContext context)
-        {
-            Guard.WhenArgument(context, "context").IsNull().Throw();
-            this.context = context;
-        }
-
-        public virtual string Execute(IList<string> parameters)
-        {
-            string find="";
-            string title;
-            string author = "";
-            string description;
-            string genres = "";
-            try
+            title = book.Title;
+            foreach (var item in book.Genres)
             {
-                for (int i = 0; i < parameters.Count; i++)
-                {
-                    find += (parameters[i]+" ");
-                }
-                
-               
-            }
-            catch
-            {
-                throw new ArgumentException("Failed parse");
+                genres += (item.Name + "\n");
             }
 
-            List<Book> books= this.context.Books.Where(x=>x.Title==find).ToList();
-            if (books.Count!=0)
+            foreach (var item in book.Authors)
             {
-                Book book = books[0];
-                 title = book.Title;
-                foreach (var item in book.Genres)
-                {
-                    genres += (item.Name +Environment.NewLine);
-                }
-
-                foreach (var item in book.Authors)
-                {
-                   author+=item.FirstName +" " +item.LastName;
-                }
-                 description = book.Description;
+                authors += item.FirstName + " " + item.LastName + "\n";
             }
-            else
+            description = book.Description;
+            rating = book.Rating;
+            price = book.Price;
+
+            foreach (var item in book.Sellers)
             {
-                throw new ArgumentException("Book not found");
+                sellers += item.FirstName + " " + item.LastName + "\n";
             }
-            
 
-            var result= ($"Title = {title}"+ Environment.NewLine+ $"Genres = {genres}" + $"Author = {author}" + Environment.NewLine +
-               $"Description ={description}") ;
-            return result;
-        }
-    }
-}
+
+            var result = $@"Title: {title}
+Genres: {genres}
+Author: {authors}
+Description: {description}
+Rating: {rating}
+Price: {price}
+Sellers: {sellers}";

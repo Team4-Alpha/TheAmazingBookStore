@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 
 namespace TheAmazingBookStore.Models
 {
@@ -16,7 +15,7 @@ namespace TheAmazingBookStore.Models
         
         public string LastName { get; set; }
 
-        public int CountryId { get; set; }
+        public int? CountryId { get; set; }
         
         public virtual Country Country { get; set; }
         

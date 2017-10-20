@@ -1,10 +1,10 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Data.Entity;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using TheAmazingBookStore.Models;
-using TheAmazingBookStore.Data.Abstractions;
+using System;
+using System.Data.Entity;
 using TheAmazingBookStore.Controller.Commands.Updating.BookUpdateCommands;
+using TheAmazingBookStore.Data.Abstractions;
+using TheAmazingBookStore.Models;
 
 namespace TheAmazingBookStore.Controller.Tests.Commands.Updating.BookUpdateCommands.UpdateBookTitleTests
 {

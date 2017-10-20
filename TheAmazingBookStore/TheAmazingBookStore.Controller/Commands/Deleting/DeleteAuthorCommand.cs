@@ -1,9 +1,6 @@
 ﻿using Bytes2you.Validation;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TheAmazingBookStore.Controller.Commands.Contracts;
 using TheAmazingBookStore.Data.Abstractions;
 using TheAmazingBookStore.Models;
@@ -20,14 +17,14 @@ namespace TheAmazingBookStore.Controller.Commands.Deleting
 
             this.context = context;
         }
-        //delete author with first name
+
         public string Execute(IList<string> parameters)
         {
-            string fname = parameters[0];
-            Author author = this.context.Authors.First(b => b.FirstName == fname);
+            int id = int.Parse(parameters[0]);
+            Author author = this.context.Authors.Find(id);
             this.context.Authors.Remove(author);
             this.context.SaveChanges();
-            return "Author deleted";
+            return $"Author with id {id} deleted";
         }
     }
 }
