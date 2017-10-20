@@ -16,6 +16,7 @@ using TheAmazingBookStore.Data;
 using TheAmazingBookStore.Data.Abstractions;
 using TheAmazingBookStore.Controller.Commands.Updating.SellerUpdateCommands;
 using TheAmazingBookStore.Controller.Commands.FindCommand;
+using TheAmazingBookStore.Controller.Commands.PDF;
 
 namespace TheAmazingBookStore.Controller.Ninject
 {
@@ -38,10 +39,13 @@ namespace TheAmazingBookStore.Controller.Ninject
             this.Bind<ICommand>().To<CreateGenreCommand>().Named("creategenre");
             this.Bind<ICommand>().To<CreateAuthorCommand>().Named("createauthor");
             this.Bind<ICommand>().To<CreateSellerCommand>().Named("createseller");
-            this.Bind<ICommand>().To<CreatePdfCommand>().Named("createpdf");
 
             //READ COMMANDS
             this.Bind<ICommand>().To<FindBookCommand>().Named("findbook");
+            this.Bind<ICommand>().To<FindAuthorCommand>().Named("findauthor");
+            this.Bind<ICommand>().To<FindSellerCommand>().Named("findseller");
+            this.Bind<ICommand>().To<FindCountryCommand>().Named("findcountry");
+            this.Bind<ICommand>().To<FindGenreCommand>().Named("findgenre");
 
             //UPDATE COMMANDS
 
@@ -75,6 +79,9 @@ namespace TheAmazingBookStore.Controller.Ninject
 
             //UTILS
             this.Bind<ICommand>().To<SeedJsonCommand>().Named("seedjson");
+            this.Bind<ICommand>().To<CreatePdfBookCommand>().Named("createpdfbook");
+            this.Bind<ICommand>().To<CreatePdfAuthorCommand>().Named("createpdfauthor");
+            this.Bind<ICommand>().To<CreatePdfSellerCommand>().Named("createpdfseller");
         }
     }
 }
