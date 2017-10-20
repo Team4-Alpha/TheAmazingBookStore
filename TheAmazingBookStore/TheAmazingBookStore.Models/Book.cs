@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace TheAmazingBookStore.Models
 {
@@ -12,7 +13,8 @@ namespace TheAmazingBookStore.Models
         }
 
         public int Id { get; set; }
-        
+
+        [StringLength(100, ErrorMessage = "The book's title cannot be less than 2 or more than 75 symbols long.")]
         public string Title { get; set; }
 
         public virtual ICollection<Author> Authors { get; set; }

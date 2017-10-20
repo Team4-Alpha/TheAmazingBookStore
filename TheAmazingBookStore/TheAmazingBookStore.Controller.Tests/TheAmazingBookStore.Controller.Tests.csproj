@@ -64,14 +64,6 @@
   <ItemGroup>
     <Compile Include="Commands\Creating\CreateBookCommandTests\Constructor_Should.cs" />
     <Compile Include="Commands\Creating\CreateBookCommandTests\Execute_Should.cs" />
-    <Compile Include="Commands\Deleting\DeleteBookCommandTests\Constructor_Should.cs" />
-    <Compile Include="Commands\Updating\BookUpdateCommands\UpdateBookDescriptionTests\Constructor_Should.cs" />
-    <Compile Include="Commands\Updating\BookUpdateCommands\UpdateBookPriceTests\Constructor_Should.cs" />
-    <Compile Include="Commands\Updating\BookUpdateCommands\UpdateBookRatingTests\Constructor_Should.cs" />
-    <Compile Include="Commands\Updating\BookUpdateCommands\UpdateBookTitleTests\Constructor_Should.cs" />
-    <Compile Include="Commands\Updating\CountryUpdateCommands\UpdateCountryNameTests\Constructor_Should.cs" />
-    <Compile Include="Commands\Updating\GenreUpdateCommands\UpdateGenreDescriptionTests\Constructor_Should.cs" />
-    <Compile Include="Commands\Updating\GenreUpdateCommands\UpdateGenreNameTests\Constructor_Should.cs" />
     <Compile Include="Core\EngineTests\Constructor_Should.cs" />
     <Compile Include="Core\EngineTests\Start_Should.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -82,7 +74,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Commands\Creating\CreatePdfCommandTests\" />
+    <Folder Include="Commands\Deleting\DeleteBookCommandTests\" />
     <Folder Include="Commands\Finding\FindBookCommandTests\" />
+    <Folder Include="Commands\Updating\BookUpdateCommands\UpdateBookDescriptionTests\" />
+    <Folder Include="Commands\Updating\BookUpdateCommands\UpdateBookPriceTests\" />
+    <Folder Include="Commands\Updating\BookUpdateCommands\UpdateBookRatingTests\" />
+    <Folder Include="Commands\Updating\BookUpdateCommands\UpdateBookTitleTests\" />
+    <Folder Include="Commands\Updating\CountryUpdateCommands\UpdateCountryNameTests\" />
+    <Folder Include="Commands\Updating\GenreUpdateCommands\UpdateGenreDescriptionTests\" />
+    <Folder Include="Commands\Updating\GenreUpdateCommands\UpdateGenreNameTests\" />
     <Folder Include="Core\Factories\CommandFactoryTests\" />
     <Folder Include="Core\Providers\CommandParserTests\" />
     <Folder Include="Core\Providers\CommandProcessorTests\" />
