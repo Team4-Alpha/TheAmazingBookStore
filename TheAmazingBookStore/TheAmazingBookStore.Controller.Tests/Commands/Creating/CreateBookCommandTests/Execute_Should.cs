@@ -2,6 +2,7 @@
 using Moq;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Linq;
 using TheAmazingBookStore.Controller.Commands.Creating;
 using TheAmazingBookStore.Data.Abstractions;
 using TheAmazingBookStore.Models;
@@ -11,20 +12,26 @@ namespace TheAmazingBookStore.Controller.Tests.Commands.Creating.CreateBookComma
     [TestClass]
     public class Execute_Should
     {
+
+        //Can't handle this anymore
         [TestMethod]
-        public void CreateBook_WhenParametersAreCorrect()
+        public void ReturnTheRightMessage_WhenTheParametersAreCorrect()
         {
-            var mockBook = new Mock<DbSet<Book>>();
-            IList<string> parameters = new List<string>();
+            IQueryable<Book> books = new List<Book>()
+            {
+                new Book()
+            }.AsQueryable();
+            
 
-            var mockContext = new Mock<IBookStoreContext>();
-            mockContext.Setup(m => m.Books).Returns(mockBook.Object);
+            var book = new Book();
 
-            var book = new CreateBookCommand(mockContext.Object);
-            book.Execute(parameters);
+            var expected = $"Book with d";
+            var setMock = new Mock<DbSet<Book>>();
+            //Act
 
-            mockBook.Verify(m => m.Add(It.IsAny<Book>()), Times.Once());
-            mockContext.Verify(m => m.SaveChanges(), Times.Once());
+            //Assert
+            Assert.AreEqual(expected, 1);
+
         }
     }
 }

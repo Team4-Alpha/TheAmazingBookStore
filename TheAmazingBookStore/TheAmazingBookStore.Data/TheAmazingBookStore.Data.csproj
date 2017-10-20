@@ -96,6 +96,10 @@
     <Compile Include="Migrations\201710200913326_Attributes-Added.Designer.cs">
       <DependentUpon>201710200913326_Attributes-Added.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710200944108_Fluent-API-Many-to-Many.cs" />
+    <Compile Include="Migrations\201710200944108_Fluent-API-Many-to-Many.Designer.cs">
+      <DependentUpon>201710200944108_Fluent-API-Many-to-Many.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -121,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710200913326_Attributes-Added.resx">
       <DependentUpon>201710200913326_Attributes-Added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710200944108_Fluent-API-Many-to-Many.resx">
+      <DependentUpon>201710200944108_Fluent-API-Many-to-Many.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
