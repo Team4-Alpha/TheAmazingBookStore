@@ -64,11 +64,16 @@
   <ItemGroup>
     <Compile Include="Commands\Creating\CreateBookCommandTests\Constructor_Should.cs" />
     <Compile Include="Commands\Creating\CreateBookCommandTests\Execute_Should.cs" />
+    <Compile Include="Commands\Deleting\DeleteBookCommandTests\Constructor_Should.cs" />
+    <Compile Include="Commands\Updating\BookUpdateCommands\UpdateBookDescriptionTests\Constructor_Should.cs" />
+    <Compile Include="Commands\Updating\BookUpdateCommands\UpdateBookPriceTests\Constructor_Should.cs" />
+    <Compile Include="Commands\Updating\BookUpdateCommands\UpdateBookRatingTests\Constructor_Should.cs" />
+    <Compile Include="Commands\Updating\BookUpdateCommands\UpdateBookTitleTests\Constructor_Should.cs" />
+    <Compile Include="Commands\Updating\CountryUpdateCommands\UpdateCountryNameTests\Constructor_Should.cs" />
+    <Compile Include="Commands\Updating\GenreUpdateCommands\UpdateGenreDescriptionTests\Constructor_Should.cs" />
+    <Compile Include="Commands\Updating\GenreUpdateCommands\UpdateGenreNameTests\Constructor_Should.cs" />
     <Compile Include="Core\EngineTests\Constructor_Should.cs" />
     <Compile Include="Core\EngineTests\Start_Should.cs" />
-    <Compile Include="Core\Providers\CommandParserTests\Constructor_Should.cs" />
-    <Compile Include="Core\Providers\CommandParserTests\ParseCommand_Should.cs" />
-    <Compile Include="Core\Providers\CommandParserTests\ParseParameters_Should.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -76,17 +81,23 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Commands\Creating\CreatePdfCommandTests\" />
-    <Folder Include="Commands\Deleting\DeleteBookCommandTests\" />
+    <Folder Include="Commands\Creating\CreateAuthorCommandTests\" />
+    <Folder Include="Commands\Creating\CreateCountryCommandTests\" />
+    <Folder Include="Commands\Creating\CreateGenreCommandTests\" />
+    <Folder Include="Commands\Creating\CreateSellerCommandTests\" />
+    <Folder Include="Commands\Deleting\DeleteAuthorCommandTests\" />
+    <Folder Include="Commands\Deleting\DeleteCountryCommandTests\" />
+    <Folder Include="Commands\Deleting\DeleteGenreCommandTests\" />
+    <Folder Include="Commands\Deleting\DeleteSellerCommandTests\" />
+    <Folder Include="Commands\Finding\FindAuhtorCommandTests\" />
     <Folder Include="Commands\Finding\FindBookCommandTests\" />
-    <Folder Include="Commands\Updating\BookUpdateCommands\UpdateBookDescriptionTests\" />
-    <Folder Include="Commands\Updating\BookUpdateCommands\UpdateBookPriceTests\" />
-    <Folder Include="Commands\Updating\BookUpdateCommands\UpdateBookRatingTests\" />
-    <Folder Include="Commands\Updating\BookUpdateCommands\UpdateBookTitleTests\" />
-    <Folder Include="Commands\Updating\CountryUpdateCommands\UpdateCountryNameTests\" />
-    <Folder Include="Commands\Updating\GenreUpdateCommands\UpdateGenreDescriptionTests\" />
-    <Folder Include="Commands\Updating\GenreUpdateCommands\UpdateGenreNameTests\" />
+    <Folder Include="Commands\Finding\FindCountryCommandTests\" />
+    <Folder Include="Commands\Finding\FindGenreCommandTests\" />
+    <Folder Include="Commands\Finding\FindSellerCommandTests\" />
+    <Folder Include="Commands\Updating\AuthorUpdateCommands\" />
+    <Folder Include="Commands\Updating\SellerUpdateCommands\" />
     <Folder Include="Core\Factories\CommandFactoryTests\" />
+    <Folder Include="Core\Providers\CommandParserTests\" />
     <Folder Include="Core\Providers\CommandProcessorTests\" />
   </ItemGroup>
   <ItemGroup>

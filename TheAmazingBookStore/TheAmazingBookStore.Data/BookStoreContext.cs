@@ -11,6 +11,29 @@ namespace TheAmazingBookStore.Data
         {
         }
 
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Book>()
+                .HasMany<Author>(s => s.Authors)
+                .WithMany(c => c.Books)
+                .Map(cs =>
+                {
+                    cs.MapLeftKey("BookRefId");
+                    cs.MapRightKey("AuthorRefId");
+                    cs.ToTable("BookAuthor");
+                });
+
+            modelBuilder.Entity<Book>()
+                .HasMany<Seller>(s => s.Sellers)
+                .WithMany(c => c.Books)
+                .Map(cs =>
+                {
+                    cs.MapLeftKey("BookRefId");
+                    cs.MapRightKey("SellerRefId");
+                    cs.ToTable("BookSeller");
+                });
+        }
+
         public DbSet<Book> Books { get; set; }
 
         public DbSet<Country> Countries { get; set; }
