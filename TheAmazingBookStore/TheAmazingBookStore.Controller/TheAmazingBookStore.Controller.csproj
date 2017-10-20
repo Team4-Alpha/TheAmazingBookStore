@@ -100,7 +100,13 @@
     <Compile Include="Commands\Deleting\DeleteCountryCommand.cs" />
     <Compile Include="Commands\Deleting\DeleteGenreCommand.cs" />
     <Compile Include="Commands\Deleting\DeleteSellerCommand.cs" />
+    <Compile Include="Commands\Finding\FindAuthorCommand.cs" />
     <Compile Include="Commands\Finding\FindBookCommand.cs" />
+    <Compile Include="Commands\Finding\FindCountryCommand.cs" />
+    <Compile Include="Commands\Finding\FindGenreCommand.cs" />
+    <Compile Include="Commands\Finding\FindSellerCommand.cs" />
+    <Compile Include="Commands\PDF\CreatePdfAuthorCommand.cs" />
+    <Compile Include="Commands\PDF\CreatePdfSellerCommand.cs" />
     <Compile Include="Commands\Updating\AuthorUpdateCommands\UpdateAuthorBooks.cs" />
     <Compile Include="Commands\Updating\AuthorUpdateCommands\UpdateAuthorCountry.cs" />
     <Compile Include="Commands\Updating\AuthorUpdateCommands\UpdateAuthorFirstName.cs" />
@@ -111,7 +117,7 @@
     <Compile Include="Commands\Updating\BookUpdateCommands\UpdateBookRating.cs" />
     <Compile Include="Commands\Updating\BookUpdateCommands\UpdateBookTitle.cs" />
     <Compile Include="Commands\Updating\CountryUpdateCommands\UpdateCountryName.cs" />
-    <Compile Include="Commands\Creating\CreatePdfCommand.cs" />
+    <Compile Include="Commands\PDF\CreatePdfBookCommand.cs" />
     <Compile Include="Commands\Updating\GenreUpdateCommands\UpdateGenreDescription.cs" />
     <Compile Include="Commands\Updating\GenreUpdateCommands\UpdateGenreName.cs" />
     <Compile Include="Commands\Updating\SellerUpdateCommands\UpdateSellerBooks.cs" />
