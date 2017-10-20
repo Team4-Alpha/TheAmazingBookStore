@@ -3,6 +3,7 @@ using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
 using TheAmazingBookStore.Controller.Commands.Contracts;
 using TheAmazingBookStore.Controller.Commands.FindCommand;
 using TheAmazingBookStore.Data;
